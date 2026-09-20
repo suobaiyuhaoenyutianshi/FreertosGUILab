@@ -1,0 +1,34 @@
+CompileFlags:
+  CompilationDatabase: build/Debug
+Completion:
+  ShowParameterTypes: false
+CompileFlags:
+  Add:
+    - -DSTM32F103xB
+    - -DUSE_HAL_DRIVER
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1\arm-none-eabi\thumb\v7-m\nofp
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1\backward
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\15.2.1\include
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\lib\gcc\arm-none-eabi\15.2.1\include-fixed
+    - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include
+  Remove:
+    - --cpu
+    - --li
+    - --c99
+    - --split_sections
+    - --diag_suppress=*
+    - --no_depend_system_headers
+    - --depend
+    - --strict
+    - --enum_is_int
+    - --gnu
+    - --apcs=*
+    - --signed_chars
+    - --split_ldm
+    - --execute_only
+    - -Otime
+  CompilationDatabase: ./build/FreertosGUILab
+  Compiler: C:\Users\zhouhaoen\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe
+Diagnostics:
+  Suppress: []

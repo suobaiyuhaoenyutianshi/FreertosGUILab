@@ -1,0 +1,9 @@
+{
+    "clangd.arguments": [
+        "--function-arg-placeholders=0"
+    ],
+     "audioCues.enabled": "never",
+      
+    "audioCues.lineHasInlineSuggestion": "never",
+    "audioCues.onCommandFailed": "never"
+}
