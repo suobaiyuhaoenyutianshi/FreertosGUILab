@@ -18,9 +18,11 @@ typedef struct
 	DMMRange_t eDMMRange; // 万用表的挡位
 	float fDMMValue; // 万用表的测量结果
 	float fVpwr; // 稳压电源模块的电压
+	float fTriggerLevel; // 触发电平，单位 V
 } DMMData_t;
 
 void vDMMInit(void);
 DMMData_t xDMMGetData(void);
+float fGetVdda(void); // 获取最近一次由 VREFINT 反推出的 VDDA
 
 #endif

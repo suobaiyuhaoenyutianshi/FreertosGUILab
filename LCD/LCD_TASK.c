@@ -3,7 +3,7 @@
 
 #include "main.h"
 #include "lcd.h"
-
+#include "cursor_label.h"
 #include "portmacro.h"
 #include "projdefs.h"
 #include <stdint.h>
@@ -157,6 +157,9 @@ void vLCDTask(void *pvParameters)
 		}
 		if (CURSOR_PANEL_REPAINT_BIT &allKeys) {
 			RepaintCursorPanel();
+		}
+		if (CURSOR_LABEL_REPAINT_BIT &allKeys) {
+			RepaintCursorLabel();
 		}
 		if (SCALE_LABEL_REPAINT_BIT & allKeys) {
 			RepaintScaleLabel();

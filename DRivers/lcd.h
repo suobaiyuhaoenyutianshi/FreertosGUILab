@@ -30,10 +30,10 @@ typedef struct
 	float XScale;          // X轴尺度因子，单位s/格
 	float YScale;          // Y轴尺度因子，单位V/格
 	uint32_t SampleRate;   // 采样率，单位Hz
-	uint8_t CursorX1;      // x轴游标1，单位%
-	int8_t CursorY1;       // y轴游标1，单位%
-	uint8_t CursorX2;      // x轴游标2，单位%
-	int8_t CursorY2;       // y轴游标2，单位%
+	int8_t CursorX1Pct;   // x轴游标1的百分比位置，单位%，范围0~100
+	int8_t CursorY1Pct;    // y轴游标1的百分比位置，单位%，范围-100~+100
+	int8_t CursorX2Pct;   // x轴游标2的百分比位置，单位%，范围0~100
+	int8_t CursorY2Pct;    // y轴游标2的百分比位置，单位%，范围-100~+100
 	float Trigger;         // 触发电压，单位V
 
 } WaveformParamTypeDef;
@@ -166,15 +166,31 @@ void LCD_DrawBitmap(uint16_t Width, uint16_t Height, const uint8_t *pData);
 // @参数：WaveformParam.Waveform - 波形数据
 // @参数：WaveformParam.Length - 波形数据的长度
 // @参数：WaveformParam.Offset - 波形显示的起始位置
-// @参数：WaveformParam.SecondsPerDiv - 横坐标每格表示的时间长度，单位s/格
-// @参数：WaveformParam.VoltsPerDiv - 纵坐标每格表示的电压大小，单位V/格
+// @参数：WaveformParam.XScale - X轴缩放比，横坐标每格表示的时间长度，单位s/格
+// @参数：WaveformParam.YScale - Y轴缩放比，纵坐标每格表示的电压大小，单位V/格
 // @参数：WaveformParam.SampleRate - 采样率，单位Hz
-// @参数：WaveformParam.CursorX1 - 横轴（时间轴）游标1的位置，单位百分比，范围0 ~ 100
-// @参数：WaveformParam.CursorY1 - 纵轴（电压轴）游标1的位置，单位百分比，范围-100 ~ +100
-// @参数：WaveformParam.CursorX2 - 横轴（时间轴）游标2的位置，单位百分比，范围0 ~ 100
-// @参数：WaveformParam.CursorY2 - 纵轴（电压轴）游标2的位置，单位百分比，范围-100 ~ +100
+// @参数：WaveformParam.CursorX1Pct - 横轴（时间轴）游标1的位置，单位百分比，范围0 ~ 100
+// @参数：WaveformParam.CursorY1Pct - 纵轴（电压轴）游标1的位置，单位百分比，范围-100 ~ +100
+// @参数：WaveformParam.CursorX2Pct - 横轴（时间轴）游标2的位置，单位百分比，范围0 ~ 100
+// @参数：WaveformParam.CursorY2Pct - 纵轴（电压轴）游标2的位置，单位百分比，范围-100 ~ +100
 // @参数：WaveformParam.TriggerLevel - 触发电压的大小，单位V
 //
 void LCD_DrawWaveform(WaveformParamTypeDef *WaveformParam);
+
+//
+// @功能：获取X轴游标的真实值
+// @参数：XPos - X轴游标的当前位置，范围0~100
+// @参数：XScale - X轴的缩放比例，单位：秒/格
+// @返回：对应的游标值，单位：秒
+//
+float LCD_GetXCursorValue(uint8_t XPos, float XScale);
+
+//
+// @功能：获取Y轴游标的真实值
+// @参数：YPos - Y轴游标的当前位置，范围-100~+100
+// @参数：YScale - Y轴的缩放比例，单位：伏特/格
+// @返回：对应的游标值，单位：伏特
+//
+float LCD_GetYCursorValue(uint8_t YPos, float YScale);
 
 #endif /* INC_LCD_H_ */

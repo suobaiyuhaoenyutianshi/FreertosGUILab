@@ -53,560 +53,708 @@ build CMakeFiles/FreertosGUILab.dir/Core/Src/app_usart1_dma.c.obj: C_COMPILER__F
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\app_usart1_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/main.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/main.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\main.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/memory_monitor.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/memory_monitor.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\memory_monitor.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_msp.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/stm32f1xx_hal_msp.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\stm32f1xx_hal_msp.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/stm32f1xx_hal_timebase_tim.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\stm32f1xx_hal_timebase_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_it.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/stm32f1xx_it.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\stm32f1xx_it.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/syscalls.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/syscalls.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/sysmem.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/sysmem.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/Core/Src/system_stm32f1xx.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/Core/Src/system_stm32f1xx.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\Core\Src\system_stm32f1xx.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/Run_mode_panel.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/Run_mode_panel.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\Run_mode_panel.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
+
+build CMakeFiles/FreertosGUILab.dir/DmmAndGui/cursor_label.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/cursor_label.c || cmake_object_order_depends_target_FreertosGUILab
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\cursor_label.c.obj.d
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
+  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/cursor_panel.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/cursor_panel.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\cursor_panel.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/dmm.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/dmm.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\dmm.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/general_panel.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/general_panel.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\general_panel.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_dmm.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/label_dmm.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\label_dmm.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_pwr.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/label_pwr.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\label_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_label.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/scale_label.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\scale_label.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_panel.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/scale_panel.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\scale_panel.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
+
+build CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveFormCapture.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/waveFormCapture.c || cmake_object_order_depends_target_FreertosGUILab
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\waveFormCapture.c.obj.d
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
+  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
+
+build CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveform_generator.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/waveform_generator.c || cmake_object_order_depends_target_FreertosGUILab
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\waveform_generator.c.obj.d
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
+  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveform_panel.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/DmmAndGui/waveform_panel.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\DmmAndGui\waveform_panel.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\DmmAndGui
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/LCD/LCD_TASK.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/LCD/LCD_TASK.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\LCD\LCD_TASK.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\LCD
-  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
-
-build CMakeFiles/FreertosGUILab.dir/LCD/image1.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/LCD/image1.c || cmake_object_order_depends_target_FreertosGUILab
-  CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\FreertosGUILab.dir\LCD\image1.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
-  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
-  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\LCD
-  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
-
-build CMakeFiles/FreertosGUILab.dir/LCD/image2.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/LCD/image2.c || cmake_object_order_depends_target_FreertosGUILab
-  CONFIG = Debug
-  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\FreertosGUILab.dir\LCD\image2.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
-  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
-  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\LCD
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/croutine.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/croutine.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\croutine.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/event_groups.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/event_groups.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\event_groups.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/heap_4.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/heap_4.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\heap_4.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/list.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/list.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\list.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/port.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/port.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\port.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/queue.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/queue.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\queue.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/stream_buffer.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/stream_buffer.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\stream_buffer.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/tasks.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/tasks.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\tasks.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/timers.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/freeRTOS/Src/timers.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src\timers.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\freeRTOS\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEY1.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEY1.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEY1.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEY2.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEY2.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEY2.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEY3.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEY3.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEY3.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEY4.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEY4.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEY4.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEYD.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEYD.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEYD.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/KEYU.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/KEYU.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\KEYU.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/key.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/key.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\key.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/key/keyTask.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/key/keyTask.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\key\keyTask.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\key
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
+
+build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c || cmake_object_order_depends_target_FreertosGUILab
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dac.c.obj.d
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
+  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
+
+build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c || cmake_object_order_depends_target_FreertosGUILab
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dac_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
+  OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: C_COMPILER__FreertosGUILab_unscanned_Debug C$:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir\C_\Users\zhouhaoen\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.6\Drivers\STM32F1xx_HAL_Driver\Src
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 build CMakeFiles/FreertosGUILab.dir/startup_stm32f103xe.s.obj: ASM_COMPILER__FreertosGUILab_unscanned_Debug C$:/flushbonading/FreertosGUILab/startup_stm32f103xe.s || cmake_object_order_depends_target_FreertosGUILab
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\FreertosGUILab.dir\startup_stm32f103xe.s.obj.d
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -x assembler-with-cpp -MMD -MP -g
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -IC:/flushbonading/FreertosGUILab/Core/Inc -IC:/flushbonading/FreertosGUILab/freeRTOS/Inc -IC:/flushbonading/FreertosGUILab/key -IC:/flushbonading/FreertosGUILab/LCD -IC:/flushbonading/FreertosGUILab/DRivers -IC:/flushbonading/FreertosGUILab/DmmAndGui -IC:/flushbonading/FreertosGUILab/cmake/stm32cubemx/../../Core/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -IC:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   OBJECT_FILE_DIR = CMakeFiles\FreertosGUILab.dir
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 
@@ -617,17 +765,18 @@ build CMakeFiles/FreertosGUILab.dir/startup_stm32f103xe.s.obj: ASM_COMPILER__Fre
 #############################################
 # Link the executable FreertosGUILab.elf
 
-build FreertosGUILab.elf: C_EXECUTABLE_LINKER__FreertosGUILab_Debug CMakeFiles/FreertosGUILab.dir/Core/Src/app_usart1_dma.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/main.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/memory_monitor.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/syscalls.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/sysmem.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/system_stm32f1xx.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/Run_mode_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/cursor_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/dmm.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/general_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_dmm.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_pwr.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_label.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveform_panel.c.obj CMakeFiles/FreertosGUILab.dir/LCD/LCD_TASK.c.obj CMakeFiles/FreertosGUILab.dir/LCD/image1.c.obj CMakeFiles/FreertosGUILab.dir/LCD/image2.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/croutine.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/event_groups.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/heap_4.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/list.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/port.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/queue.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/stream_buffer.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/tasks.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/timers.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY1.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY2.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY3.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY4.c.obj CMakeFiles/FreertosGUILab.dir/key/KEYD.c.obj CMakeFiles/FreertosGUILab.dir/key/KEYU.c.obj CMakeFiles/FreertosGUILab.dir/key/key.c.obj CMakeFiles/FreertosGUILab.dir/key/keyTask.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj CMakeFiles/FreertosGUILab.dir/startup_stm32f103xe.s.obj | C$:/flushbonading/FreertosGUILab/DRivers/lcd.a
+build FreertosGUILab.elf: C_EXECUTABLE_LINKER__FreertosGUILab_Debug CMakeFiles/FreertosGUILab.dir/Core/Src/app_usart1_dma.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/main.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/memory_monitor.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_msp.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_hal_timebase_tim.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/stm32f1xx_it.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/syscalls.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/sysmem.c.obj CMakeFiles/FreertosGUILab.dir/Core/Src/system_stm32f1xx.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/Run_mode_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/cursor_label.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/cursor_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/dmm.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/general_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_dmm.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/label_pwr.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_label.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/scale_panel.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveFormCapture.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveform_generator.c.obj CMakeFiles/FreertosGUILab.dir/DmmAndGui/waveform_panel.c.obj CMakeFiles/FreertosGUILab.dir/LCD/LCD_TASK.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/croutine.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/event_groups.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/heap_4.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/list.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/port.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/queue.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/stream_buffer.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/tasks.c.obj CMakeFiles/FreertosGUILab.dir/freeRTOS/Src/timers.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY1.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY2.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY3.c.obj CMakeFiles/FreertosGUILab.dir/key/KEY4.c.obj CMakeFiles/FreertosGUILab.dir/key/KEYD.c.obj CMakeFiles/FreertosGUILab.dir/key/KEYU.c.obj CMakeFiles/FreertosGUILab.dir/key/key.c.obj CMakeFiles/FreertosGUILab.dir/key/keyTask.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c.obj CMakeFiles/FreertosGUILab.dir/C_/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj CMakeFiles/FreertosGUILab.dir/startup_stm32f103xe.s.obj | C$:/flushbonading/FreertosGUILab/DRivers/lcd.a
   CONFIG = Debug
-  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g
+  FLAGS = -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m3  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g
   LINK_FLAGS = -mcpu=cortex-m3  -T "C:/flushbonading/FreertosGUILab/stm32f103rctx_flash.ld" --specs=nano.specs -Wl,-Map=FreertosGUILab.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage -u _printf_float
   LINK_LIBRARIES = C:/flushbonading/FreertosGUILab/DRivers/lcd.a
   LINK_PATH = -LC:/flushbonading/FreertosGUILab/DRivers
   OBJECT_DIR = CMakeFiles\FreertosGUILab.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\FreertosGUILab.dir\
   TARGET_FILE = FreertosGUILab.elf
-  TARGET_PDB = FreertosGUILab.elf.dbg
+  TARGET_PDB = FreertosGUILab.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\FreertosGUILab.dir
 
 
@@ -712,14 +861,14 @@ build cmake/stm32cubemx/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/flushbonading/FreertosGUILab/build/Debug/cmake_install.cmake C$:/flushbonading/FreertosGUILab/build/Debug/cmake/stm32cubemx/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Generic.cmake C$:/flushbonading/FreertosGUILab/CMakeLists.txt C$:/flushbonading/FreertosGUILab/cmake/gcc-arm-none-eabi.cmake C$:/flushbonading/FreertosGUILab/cmake/stm32cubemx/CMakeLists.txt C$:/flushbonading/FreertosGUILab/user_sources.cmake CMakeCache.txt CMakeFiles/4.4.0-rc3/CMakeASMCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeSystem.cmake
+build build.ninja C$:/flushbonading/FreertosGUILab/build/Debug/cmake_install.cmake C$:/flushbonading/FreertosGUILab/build/Debug/cmake/stm32cubemx/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PellesC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Generic.cmake C$:/flushbonading/FreertosGUILab/CMakeLists.txt C$:/flushbonading/FreertosGUILab/cmake/gcc-arm-none-eabi.cmake C$:/flushbonading/FreertosGUILab/cmake/stm32cubemx/CMakeLists.txt C$:/flushbonading/FreertosGUILab/user_sources.cmake CMakeCache.txt CMakeFiles/4.4.0-rc3/CMakeASMCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Generic.cmake C$:/flushbonading/FreertosGUILab/CMakeLists.txt C$:/flushbonading/FreertosGUILab/cmake/gcc-arm-none-eabi.cmake C$:/flushbonading/FreertosGUILab/cmake/stm32cubemx/CMakeLists.txt C$:/flushbonading/FreertosGUILab/user_sources.cmake CMakeCache.txt CMakeFiles/4.4.0-rc3/CMakeASMCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeSystem.cmake: phony
+build C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeASMInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeNinjaFindMake.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystem.cmake.in C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestASMCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-ASM.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/PellesC-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeASMLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectASMLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Internal/CMakeInspectCXXLinker.cmake C$:/Program$ Files/CMake/share/cmake-4.4/Modules/Platform/Generic.cmake C$:/flushbonading/FreertosGUILab/CMakeLists.txt C$:/flushbonading/FreertosGUILab/cmake/gcc-arm-none-eabi.cmake C$:/flushbonading/FreertosGUILab/cmake/stm32cubemx/CMakeLists.txt C$:/flushbonading/FreertosGUILab/user_sources.cmake CMakeCache.txt CMakeFiles/4.4.0-rc3/CMakeASMCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeCXXCompiler.cmake CMakeFiles/4.4.0-rc3/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -2,6 +2,7 @@
 #include "main.h"
 #include "LCD_TASK.h"
 #include "lcd.h"
+#include "waveFormCapture.h"
 int iSelectedIndex = -1; // 光标位置，负数表示未转中，0-x轴缩放比，1-y轴缩放比
 // x轴缩放比
 static int16_t xScaleIndex = 5; // 当前挡位
@@ -35,11 +36,16 @@ void vadjust_SCALE_panel(int8_t directNum){
     if (iSelectedIndex == 0) {
         xScaleIndex = (xScaleIndex + directNum +numOfXScales)%numOfXScales;
 
+        // 时基挡位与采样率一一对应：1024 点铺满一屏(16 格)，fs = 1024/(16 × xScale)
+        // 前 4 挡受 ADC 最高速度限制(约 500kHz)，统一用 ARR=143
+        static const uint16_t PSCs[] = {0,0,0,0,0,0,0,0,0,0,0,0};
+        static const uint16_t ARRs[] = {143,143,143,143,225,561,1124,2251,5624,11249,22549,56249};
+        WaveCaptureSetSampleRate(PSCs[xScaleIndex], ARRs[xScaleIndex]);
     }else {
         yScaleIndex = (yScaleIndex+directNum+numOfYScales)%numOfYScales;
     }
 
-     xEventGroupSetBits(xEventLcd,SCALE_PANEL_REPAINT_BIT|SCALE_LABEL_REPAINT_BIT);
+     xEventGroupSetBits(xEventLcd,SCALE_PANEL_REPAINT_BIT|SCALE_LABEL_REPAINT_BIT|WAVEFORM_PANEL_REPAINT_BIT|CURSOR_LABEL_REPAINT_BIT);
 }
 void vRepaint_SCALE_panel(void){
     

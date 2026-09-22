@@ -11,6 +11,7 @@
 #include "FreeRTOS.h"
 #include "event_groups.h"
 static QueueHandle_t  xMailbox; // 邮箱句柄，静态全局变量，仅文件内部可见
+static float fVddaNow = 3.3f; // 最近一次由 VREFINT 反推出的 VDDA，供其它模块换算共用
 
 static DMMRange_t DMM_GetRange(void);
 static float prvCalcDMMValue(float fVadc, DMMRange_t eRange);
@@ -29,6 +30,14 @@ DMMData_t xDMMGetData(void){
     DMMData_t DMM;
     xQueuePeek(xMailbox,&DMM,portMAX_DELAY);
     return DMM;
+}
+
+//
+// @作用：获取最近一次由 VREFINT 反推出的 VDDA
+// @返回：VDDA，单位 V。上电到第一次注入采样完成前返回 3.3
+//
+float fGetVdda(void){
+    return fVddaNow;
 }
 //
 // @作用：获取万用表的当前挡位
@@ -126,21 +135,25 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc){
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 	if(hadc->Instance==ADC1){
 		
-		float fVdda = 4095.0f / HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_2) * 1.205f;
+		fVddaNow = 4095.0f / HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_2) * 1.205f;
 		// 万用表模块的运算放大电路的输出电压
-		float fVdmm_adc = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_1) / 4095.0f * fVdda;
+		float fVdmm_adc = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_1) / 4095.0f * fVddaNow;
 
 		// 稳压电源模块的输出电压
-		float fVpwr = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_3) / 4095.0f * fVdda * 6.0f;
+		float fVpwr = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_3) / 4095.0f * fVddaNow * 6.0f;
 
 		DMMRange_t eDMMRange = DMM_GetRange(); // 获取当前挡位
 		float fDMMValue = prvCalcDMMValue(fVdmm_adc, eDMMRange); // 计算结果
+
+		// 触发电平：注入组第 4 路（PA0 上的触发电位器）
+		float fTriggerLevel = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_4) / 4095.0f * 3.3f * 2.0f - 2.5f;
 
 		DMMData_t xDmmData;
 
 		xDmmData.eDMMRange = eDMMRange;
 		xDmmData.fDMMValue = fDMMValue;
 		xDmmData.fVpwr = fVpwr;
+		xDmmData.fTriggerLevel = fTriggerLevel;
 
 		xQueueOverwriteFromISR(xMailbox, &xDmmData, &xHigherPriorityTaskWoken);
 		extern EventGroupHandle_t xEventLcd;

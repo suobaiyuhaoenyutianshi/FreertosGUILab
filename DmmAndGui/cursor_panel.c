@@ -171,7 +171,7 @@ void AdjustCursorPanel(int iDirection)
 
 	// 5. 通过设置事件组的比特位，来触发游标面板重绘
 	
-	xEventGroupSetBits(xEventLcd, CURSOR_PANEL_REPAINT_BIT | WAVEFORM_PANEL_REPAINT_BIT);
+	xEventGroupSetBits(xEventLcd, CURSOR_PANEL_REPAINT_BIT | WAVEFORM_PANEL_REPAINT_BIT | CURSOR_LABEL_REPAINT_BIT);
 }
 
 // 获取游标X1的百分比

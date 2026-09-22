@@ -12,7 +12,8 @@ void vLCDTask(void *pvParameters);
 #define SCALE_LABEL_REPAINT_BIT     (EventBits_t)(0x01 << 5) // bit5，重绘缩放标签
 #define CURSOR_PANEL_REPAINT_BIT    (EventBits_t)(0x01 << 6) // bit6，重绘游标面板
 #define WAVEFORM_PANEL_REPAINT_BIT  (EventBits_t)(0x01 << 7) // bit7，重绘波形面板
+#define CURSOR_LABEL_REPAINT_BIT    (EventBits_t)(0x01 << 8) // bit8，重绘游标标签
 #define ALL_REPAINT_BITS (PWR_LABLE_REPAINT_BIT | DMM_LABLE_REPAINT_BIT | GENERATOR_PANEL_REPAINT_BIT \
 		                | RUNMODE_PANEL_REPAINT_BIT | SCALE_PANEL_REPAINT_BIT | SCALE_LABEL_REPAINT_BIT \
-                        | CURSOR_PANEL_REPAINT_BIT | WAVEFORM_PANEL_REPAINT_BIT) // 所有用到的比特位
+                        | CURSOR_PANEL_REPAINT_BIT | WAVEFORM_PANEL_REPAINT_BIT | CURSOR_LABEL_REPAINT_BIT) // 所有用到的比特位
 #endif
