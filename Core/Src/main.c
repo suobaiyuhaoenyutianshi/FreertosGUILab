@@ -36,6 +36,7 @@
 #include "waveform_generator.h"
 #include <string.h>
 #include "keyTask.h"
+#include "KEYU.h"     // vKeyUTask：KEYU 专职执行任务（信号量触发）
 #include "LCD_TASK.h"
 /* USER CODE END Includes */
 
@@ -89,9 +90,83 @@ static void MX_TIM3_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/* ====================== 【调试练习】故意制造一次 HardFault ======================
+ * 目的：练习读 stm32f1xx_it.c 里 hardfault_dump() 抓到的那一堆寄存器。
+ *
+ * 玩法：
+ *   1) 保持下面宏 = 1，编译烧写。上电约 1 秒后程序会停死（LED 不再闪）。
+ *   2) 调试器里按"暂停"，你会停在 hardfault_dump() 的 while(1) 上（看调用栈就知道）。
+ *   3) 打开 Watch / Live Watch，逐个看这几个全局变量：
+ *        hf_pc         → 出错的那条指令地址（最关键）
+ *        hf_lr         → 出错函数的返回地址，即"谁调用了它"
+ *        hf_r0 ~ hf_r3 → 里面有一个等于刚才那个"坏地址"
+ *        hf_psr        → 低 9 位是异常号
+ *        hf_exc_return → 0xFFFFFFFD 表示崩在任务里（读的是 PSP）
+ *        hf_cfsr       → 告诉你"为什么崩"（PRECISERR / UNALIGNED / ...）
+ *        hf_bfar       → 出错时想访问的那个地址
+ *   4) 拿 hf_pc 去查源文件行号：
+ *        arm-none-eabi-addr2line -e build/Debug/FreertosGUILab.elf -f -C 0x08xxxxxx
+ *      （或在 IDE 反汇编窗口 Ctrl+G 跳到该地址）
+ *   5) 定位到下面那一行之后，把宏改成 0，重新编译即可恢复正常。
+ *
+ * 提示：先自己想，别急着往下看注释里写的答案。
+ * ============================================================================ */
+#define EXERCISE_CRASH_ENABLE   0
+
+#if EXERCISE_CRASH_ENABLE
+static void vExercise_Crash(void)
+{
+    /* 0x30000000 在 STM32F103 的存储映射里没有对应外设/内存 → 写它必然触发
+     * BusFault。实测为"不精确错误(IMPRECISERR, CFSR=0x400)"：写缓冲把错误延迟
+     * 上报，硬件来不及填 BFAR(BFARVALID=0)。找真凶：反汇编 hf_pc 附近的那条
+     * STR，R3 里就是 0x30000000。 */
+    volatile uint32_t *pBad = (volatile uint32_t *)0x30000000U;
+    *pBad = 0x12345678U;     /* ← 出事的就是这一行 */
+}
+#endif
+
+/* ==================== 【调试练习2】调用非法函数指针 → UsageFault ====================
+ * 目的：和练习1对比——这次不是“数据/总线错误”，而是“用法错误(UsageFault)”。
+ * 玩法：
+ *   1) 保持 EXERCISE_JUMP_ENABLE=1，编译烧写。约 1 秒后程序停死（LED 不再闪）。
+ *   2) 按暂停停在硬故障现场，Watch 看这几个：
+ *        hf_psr        崩前 xPSR：看 bit24 T 位（0=非Thumb）；IPSR 是崩前异常号(线程=0)
+ *        hf_cfsr       0x20000 = bit17 INVSTATE（试图进入非 Thumb 状态执行）
+ *        hf_pc         → 反汇编/addr2line 看是哪次跳转闸的
+ *        hf_lr         → 调用它的 vled1Task
+ *   3) 关键区别点：这次 R3/PC 都像“正常地址”，靠 CFSR 的 INVSTATE(0x20000) + PC 偶数(bit0=0)
+ *      才能认出是“用法错误”，不是去查“坏地址”。练的就是这个区分能力。
+ * 提示：SHCSR 开了 USGFAULTENA 才能让 UsageFault 亲自接管（否则会升级成 HardFault，
+ *      调试器寄存器视图里的当前 IPSR 就从 6 变回 3）。调试完把 EXERCISE_JUMP_ENABLE 改回 0。
+ * ================================================================================= */
+#define EXERCISE_JUMP_ENABLE   0
+
+#if EXERCISE_JUMP_ENABLE
+static void vExercise_JumpBad(void)
+{
+    /* 让 UsageFault 真正接管，这样 hf_psr 的 IPSR 才显示 6（否则升级成 HardFault=3） */
+    SCB->SHCSR |= SCB_SHCSR_USGFAULTENA_Msk;
+
+    /* 把一个“偶数地址(bit0=0,即非 Thumb)”当作函数调用。
+     * Cortex-M3 只认 Thumb(bit0=1)，遇到 bit0=0 就报 INVSTATE。 */
+    void (*pBad)(void) = (void (*)(void))0x20004e00U;
+    pBad();
+}
+#endif
+
 void vled1Task(void* pvparameters){
   (void)pvparameters;
   for(;;){
+#if EXERCISE_CRASH_ENABLE
+    /* 先延时 1 秒再崩，给你时间连上调试器 / 看清 LED 闪了一下才停 */
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    vExercise_Crash();
+#endif
+#if EXERCISE_JUMP_ENABLE
+    /* 先延时 1 秒再崩，给你时间连调试器 */
+    vTaskDelay(pdMS_TO_TICKS(1000));
+    vExercise_JumpBad();
+#endif
     HAL_GPIO_WritePin(LED1port,led1PIN,GPIO_PIN_SET);
     vTaskDelay(pdMS_TO_TICKS(500));
     HAL_GPIO_WritePin(LED1port,led1PIN,GPIO_PIN_RESET);
@@ -127,6 +202,7 @@ int main(void)
   TaskHandle_t KEYSWORK;
   TaskHandle_t KEYSSCAN;
   TaskHandle_t LCD;
+  TaskHandle_t KEYUWORK;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -155,12 +231,19 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   App_USART1_Init();
+   vLCDEventGroupInit(); // 在调度器启动前静态创建 xEventLcd，避免 ADC 注入 ISR 提前使用 NULL
   vDMMInit();
+ 
   WaveCaptureInit(); // 波形捕捉器：互斥锁、三个软件定时器、浮点换算任务
   vWaveGenInit();    // 信号发生器：DAC + TIM5 + DMA2
  
  xTaskCreate(vKeyWOrksScan,"KEYINITSCAN",128,NULL,2,&KEYSSCAN);//只是扫描了key1 都小些可y1
   xTaskCreate(vKeyWorkerTask,"KEYIWORK",128,NULL,1,&KEYSWORK);//只有key1
+  /* KEYU 的专职执行任务：信号量由扫描任务里的 keyUInit() 创建，
+   * 本任务只负责"等到信号量 → 执行一次 keyUCallback"。
+   * 之前这条链是断的（信号量句柄为 NULL、且没有等待点），补上这个任务后
+   * 按一下 KEYU 才会真正走到回调。 */
+  xTaskCreate(vKeyUTask,"KEYUTASK",128,NULL,1,&KEYUWORK);
   xTaskCreate(vled1Task,"led1",128,NULL,1,&LED1);
   xTaskCreate(vLCDTask, "LCD", 256, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
    //xTaskCreate(vDMMInit, "DMMIN", 256, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
@@ -170,6 +253,7 @@ int main(void)
   vRegisterTaskForMonitoring(usart1);
   vRegisterTaskForMonitoring(KEYSSCAN);
   vRegisterTaskForMonitoring(KEYSWORK);
+  vRegisterTaskForMonitoring(KEYUWORK);
   
 
   vStartMemoryMonitor();
