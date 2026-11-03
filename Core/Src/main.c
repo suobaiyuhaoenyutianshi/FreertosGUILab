@@ -25,6 +25,7 @@
 #include "projdefs.h"
 #include "stm32f1xx_hal_def.h"
 #include "stm32f1xx_hal_gpio.h"
+#include "stm32f1xx_hal_spi.h"
 #include "task.h"              // 如果需要任务
 #include "timers.h"            // 然后才是其他组件
 #include "event_groups.h"      // 然后才是其他组件
@@ -188,6 +189,7 @@ void vled1Task(void* pvparameters){
 void vled3Task(void* pvparameters){
   (void)pvparameters;
   for(;;){
+   
     HAL_GPIO_WritePin(LED3port,led3PIN,GPIO_PIN_SET);
     vTaskDelay(pdMS_TO_TICKS(500));
     HAL_GPIO_WritePin(LED3port,led3PIN,GPIO_PIN_RESET);
