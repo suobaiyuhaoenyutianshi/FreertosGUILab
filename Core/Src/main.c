@@ -51,6 +51,18 @@
 #define LED3port GPIOC
 #define led1PIN  GPIO_PIN_1
 #define led3PIN  GPIO_PIN_3
+
+/* 各任务栈深度（单位：字）。
+ * 创建任务与内存监控注册必须用同一个值：监控要算"剩余百分比"，
+ * 靠的就是申请栈深度；两处各写一个数字，改一处忘另一处，百分比就失真了。 */
+#define TASK_STACK_KEY_SCAN     128
+#define TASK_STACK_KEY_WORK     128
+#define TASK_STACK_KEY_U        128
+#define TASK_STACK_LED1         128
+#define TASK_STACK_LCD          256
+/* UART1 守门员任务由 App_USART1_Init() 内部创建，栈深度固定 256（见 app_usart1_dma.c） */
+#define TASK_STACK_UART1_TX     256
+/* 浮点换算任务的深度由 DmmAndGui/waveFormCapture.h 里的 WAVE_CAPTURE_TASK_STACK_WORDS 统一定义 */
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -237,23 +249,30 @@ int main(void)
   WaveCaptureInit(); // 波形捕捉器：互斥锁、三个软件定时器、浮点换算任务
   vWaveGenInit();    // 信号发生器：DAC + TIM5 + DMA2
  
- xTaskCreate(vKeyWOrksScan,"KEYINITSCAN",128,NULL,2,&KEYSSCAN);//只是扫描了key1 都小些可y1
-  xTaskCreate(vKeyWorkerTask,"KEYIWORK",128,NULL,1,&KEYSWORK);//只有key1
+ xTaskCreate(vKeyWOrksScan,"KEYINITSCAN",TASK_STACK_KEY_SCAN,NULL,2,&KEYSSCAN);//只是扫描了key1 都小些可y1
+  xTaskCreate(vKeyWorkerTask,"KEYIWORK",TASK_STACK_KEY_WORK,NULL,1,&KEYSWORK);//只有key1
   /* KEYU 的专职执行任务：信号量由扫描任务里的 keyUInit() 创建，
    * 本任务只负责"等到信号量 → 执行一次 keyUCallback"。
    * 之前这条链是断的（信号量句柄为 NULL、且没有等待点），补上这个任务后
    * 按一下 KEYU 才会真正走到回调。 */
-  xTaskCreate(vKeyUTask,"KEYUTASK",128,NULL,1,&KEYUWORK);
-  xTaskCreate(vled1Task,"led1",128,NULL,1,&LED1);
-  xTaskCreate(vLCDTask, "LCD", 256, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
+  xTaskCreate(vKeyUTask,"KEYUTASK",TASK_STACK_KEY_U,NULL,1,&KEYUWORK);
+  xTaskCreate(vled1Task,"led1",TASK_STACK_LED1,NULL,1,&LED1);
+  xTaskCreate(vLCDTask, "LCD", TASK_STACK_LCD, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
    //xTaskCreate(vDMMInit, "DMMIN", 256, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
    
-  vRegisterTaskForMonitoring(LED1);//vDMMInit
-  vRegisterTaskForMonitoring(LCD);
-  vRegisterTaskForMonitoring(usart1);
-  vRegisterTaskForMonitoring(KEYSSCAN);
-  vRegisterTaskForMonitoring(KEYSWORK);
-  vRegisterTaskForMonitoring(KEYUWORK);
+  /* 注册内存监控名单。
+   * 之前只有 LED1/LCD/串口/两个按键任务这 5 个"轻任务"，真正吃栈的两项反而漏了：
+   *   - float_archIT：每帧对 1024 点做浮点换算，是示波器最重的业务任务；
+   *   - KEYUTASK：KEYU 的专职任务（本次补的）。
+   * 注册时连同申请栈深度一起报进去，串口输出才能给出"剩余/总量 + 百分比"。 */
+  vRegisterTaskForMonitoring(LED1,     TASK_STACK_LED1);//vDMMInit
+  vRegisterTaskForMonitoring(LCD,      TASK_STACK_LCD);
+  vRegisterTaskForMonitoring(usart1,   TASK_STACK_UART1_TX);
+  vRegisterTaskForMonitoring(KEYSSCAN, TASK_STACK_KEY_SCAN);
+  vRegisterTaskForMonitoring(KEYSWORK, TASK_STACK_KEY_WORK);
+  vRegisterTaskForMonitoring(KEYUWORK, TASK_STACK_KEY_U);
+  /* WaveCaptureInit() 在上面的初始化区就已创建该任务，这里取句柄注册 */
+  vRegisterTaskForMonitoring(xWaveCaptureGetTaskHandle(), WAVE_CAPTURE_TASK_STACK_WORDS);
   
 
   vStartMemoryMonitor();
