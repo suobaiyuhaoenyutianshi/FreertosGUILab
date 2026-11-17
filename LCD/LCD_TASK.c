@@ -23,7 +23,16 @@ static void PrvSendData(uint8_t* pData,uint16_t size);
 static void prvShowImage(uint16_t* image);
 static void Reset(void);
 EventGroupHandle_t xEventLcd;
+static StaticEventGroup_t xEventLcdBuffer;   // 静态事件组缓冲：在调度器启动前创建，防止 ADC 注入 ISR 提前使用 NULL
+
+// @作用：在调度器启动前完成事件组创建，消除"注入中断先于 LCD 任务运行"的竞态
+void vLCDEventGroupInit(void){
+	
+    xEventLcd = xEventGroupCreateStatic(&xEventLcdBuffer);
+}
 //LCD屏共有320行，240列
+/* 保留作全屏清屏示例，当前调用处已被注释；显式标记 unused 以免 -Wall 报警 */
+__attribute__((unused))
 static void ClearScreen(void)
 {
 	
@@ -86,6 +95,7 @@ static void PrvSendData(uint8_t* pData,uint16_t size){
 	//选择从机
 	HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_RESET);
 	HAL_SPI_Transmit_DMA(&hspi1,pData,size);//只有dma完成会触发HAL_SPI_TxCpltCallback这个中断说明数据发射王  给信号下面才能进行
+	
 	xSemaphoreTake(xSemForDMa,portMAX_DELAY);
 
 	//取消选中
@@ -95,8 +105,7 @@ static void PrvSendData(uint8_t* pData,uint16_t size){
 
 void vLCDTask(void *pvParameters)
 {
-	//创建事件组
-	xEventLcd = xEventGroupCreate();
+	//事件组已在调度器启动前由 vLCDEventGroupInit() 静态创建，这里不再重复创建
 	LCD_InitTypeDef lcdInstruct ={0};
 	xSemForDMa = xSemaphoreCreateBinary();
 	(void) pvParameters;
@@ -193,6 +202,8 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
 		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 	}
 }
+/* 保留作图片显示示例，当前调用处已被注释；显式标记 unused 以免 -Wall 报警 */
+__attribute__((unused))
 static void prvShowImage(uint16_t* image)
 {
 	// 设置图像的显示范围

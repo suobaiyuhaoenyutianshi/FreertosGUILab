@@ -2,6 +2,7 @@
 #define LCD_TASK_H
 
 void vLCDTask(void *pvParameters);
+void vLCDEventGroupInit(void);   // 调度器启动前静态创建 xEventLcd（消除 ISR 竞态）
 
 
 #define PWR_LABLE_REPAINT_BIT       (EventBits_t)(0x01 << 0) // bit0，重绘稳压电源标签

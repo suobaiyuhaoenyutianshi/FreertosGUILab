@@ -37,7 +37,6 @@
 #include "waveform_generator.h"
 #include <string.h>
 #include "keyTask.h"
-#include "KEYU.h"     // vKeyUTask：KEYU 专职执行任务（信号量触发）
 #include "LCD_TASK.h"
 /* USER CODE END Includes */
 
@@ -58,7 +57,6 @@
  * 靠的就是申请栈深度；两处各写一个数字，改一处忘另一处，百分比就失真了。 */
 #define TASK_STACK_KEY_SCAN     128
 #define TASK_STACK_KEY_WORK     128
-#define TASK_STACK_KEY_U        128
 #define TASK_STACK_LED1         128
 #define TASK_STACK_LCD          256
 /* UART1 守门员任务由 App_USART1_Init() 内部创建，栈深度固定 256（见 app_usart1_dma.c） */
@@ -75,11 +73,16 @@
 ADC_HandleTypeDef hadc1;
 DMA_HandleTypeDef hdma_adc1;
 
+DAC_HandleTypeDef hdac;
+
+IWDG_HandleTypeDef hiwdg;
+
 SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_tx;
 
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim5;
 
 UART_HandleTypeDef huart1;
 DMA_HandleTypeDef hdma_usart1_tx;
@@ -97,6 +100,9 @@ static void MX_SPI1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_DAC_Init(void);
+static void MX_TIM5_Init(void);
+static void MX_IWDG_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -216,7 +222,7 @@ int main(void)
   TaskHandle_t KEYSWORK;
   TaskHandle_t KEYSSCAN;
   TaskHandle_t LCD;
-  TaskHandle_t KEYUWORK;
+  TaskHandle_t KEYSLOW;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -243,6 +249,11 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
+  MX_DAC_Init();
+  MX_TIM5_Init();
+  /* IWDG 暂不启用：CubeMX 6.18 重新生成时自动勾上了看门狗，但全工程没有喂狗点，
+   * 0.41s 就会复位一次，表现为 LCD 花屏 + 闪烁。若以后要用，需配套 HAL_IWDG_Refresh()。 */
+  //MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
   App_USART1_Init();
    vLCDEventGroupInit(); // 在调度器启动前静态创建 xEventLcd，避免 ADC 注入 ISR 提前使用 NULL
@@ -253,11 +264,12 @@ int main(void)
  
  xTaskCreate(vKeyWOrksScan,"KEYINITSCAN",TASK_STACK_KEY_SCAN,NULL,2,&KEYSSCAN);//只是扫描了key1 都小些可y1
   xTaskCreate(vKeyWorkerTask,"KEYIWORK",TASK_STACK_KEY_WORK,NULL,1,&KEYSWORK);//只有key1
-  /* KEYU 的专职执行任务：信号量由扫描任务里的 keyUInit() 创建，
-   * 本任务只负责"等到信号量 → 执行一次 keyUCallback"。
-   * 之前这条链是断的（信号量句柄为 NULL、且没有等待点），补上这个任务后
-   * 按一下 KEYU 才会真正走到回调。 */
-  xTaskCreate(vKeyUTask,"KEYUTASK",TASK_STACK_KEY_U,NULL,1,&KEYUWORK);
+  /* 慢按键队列 + 唯一执行者：KEYU/KEYD 共用。
+   * 慢回调（重算波表、重启 DAC/TIM5、改时基）不占公共队列，也不会并发改硬件。
+   * 队列必须在任务启动前建好，否则 KEYSLOW 第一次 xQueueReceive 就是空句柄。 */
+  xSlowKeyQue = xQueueCreate(10,sizeof(job_t));
+  configASSERT(xSlowKeyQue != NULL);
+  xTaskCreate(vKeySlowTask,"KEYSLOW",TASK_STACK_KEY_SLOW,NULL,1,&KEYSLOW);
   xTaskCreate(vled1Task,"led1",TASK_STACK_LED1,NULL,1,&LED1);
   xTaskCreate(vLCDTask, "LCD", TASK_STACK_LCD, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
    //xTaskCreate(vDMMInit, "DMMIN", 256, NULL, 1, &LCD); // 注意这里的任务栈大小设置为256
@@ -265,14 +277,14 @@ int main(void)
   /* 注册内存监控名单。
    * 之前只有 LED1/LCD/串口/两个按键任务这 5 个"轻任务"，真正吃栈的两项反而漏了：
    *   - float_archIT：每帧对 1024 点做浮点换算，是示波器最重的业务任务；
-   *   - KEYUTASK：KEYU 的专职任务（本次补的）。
+   *   - KEYSLOW：KEYU/KEYD 慢回调的唯一执行者。
    * 注册时连同申请栈深度一起报进去，串口输出才能给出"剩余/总量 + 百分比"。 */
   vRegisterTaskForMonitoring(LED1,     TASK_STACK_LED1);//vDMMInit
   vRegisterTaskForMonitoring(LCD,      TASK_STACK_LCD);
   vRegisterTaskForMonitoring(usart1,   TASK_STACK_UART1_TX);
   vRegisterTaskForMonitoring(KEYSSCAN, TASK_STACK_KEY_SCAN);
   vRegisterTaskForMonitoring(KEYSWORK, TASK_STACK_KEY_WORK);
-  vRegisterTaskForMonitoring(KEYUWORK, TASK_STACK_KEY_U);
+  vRegisterTaskForMonitoring(KEYSLOW, TASK_STACK_KEY_SLOW);
   /* WaveCaptureInit() 在上面的初始化区就已创建该任务，这里取句柄注册 */
   vRegisterTaskForMonitoring(xWaveCaptureGetTaskHandle(), WAVE_CAPTURE_TASK_STACK_WORDS);
   
@@ -305,10 +317,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
@@ -375,7 +388,7 @@ static void MX_ADC1_Init(void)
   */
   sConfigInjected.InjectedChannel = ADC_CHANNEL_9;
   sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
-  sConfigInjected.InjectedNbrOfConversion = 4;
+  sConfigInjected.InjectedNbrOfConversion = 3;
   sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_1CYCLE_5;
   sConfigInjected.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJECCONV_T2_TRGO;
   sConfigInjected.AutoInjectedConv = DISABLE;
@@ -406,15 +419,6 @@ static void MX_ADC1_Init(void)
     Error_Handler();
   }
 
-  /** Configure Injected Channel : 第4路为触发电平（PA0 电位器） */
-  sConfigInjected.InjectedChannel = ADC_CHANNEL_0;
-  sConfigInjected.InjectedRank = ADC_INJECTED_RANK_4;
-  sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_13CYCLES_5;
-  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_1;
@@ -427,6 +431,74 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief DAC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DAC_Init(void)
+{
+
+  /* USER CODE BEGIN DAC_Init 0 */
+
+  /* USER CODE END DAC_Init 0 */
+
+  DAC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN DAC_Init 1 */
+
+  /* USER CODE END DAC_Init 1 */
+
+  /** DAC Initialization
+  */
+  hdac.Instance = DAC;
+  if (HAL_DAC_Init(&hdac) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** DAC channel OUT1 config
+  */
+  sConfig.DAC_Trigger = DAC_TRIGGER_T5_TRGO;
+  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_DISABLE;
+  if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DAC_Init 2 */
+
+  /* USER CODE END DAC_Init 2 */
+
+}
+
+/**
+  * @brief IWDG Initialization Function
+  * @param None
+  * @retval None
+  */
+__attribute__((unused)) static void MX_IWDG_Init(void)
+{
+
+  /* USER CODE BEGIN IWDG_Init 0 */
+
+  /* USER CODE END IWDG_Init 0 */
+
+  /* USER CODE BEGIN IWDG_Init 1 */
+
+  /* USER CODE END IWDG_Init 1 */
+  hiwdg.Instance = IWDG;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Reload = 4095;
+  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN IWDG_Init 2 */
+
+  /* USER CODE END IWDG_Init 2 */
 
 }
 
@@ -559,6 +631,51 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief TIM5 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM5_Init(void)
+{
+
+  /* USER CODE BEGIN TIM5_Init 0 */
+
+  /* USER CODE END TIM5_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM5_Init 1 */
+
+  /* USER CODE END TIM5_Init 1 */
+  htim5.Instance = TIM5;
+  htim5.Init.Prescaler = 71;
+  htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim5.Init.Period = 1;
+  htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim5.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim5) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim5, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim5, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM5_Init 2 */
+
+  /* USER CODE END TIM5_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -621,8 +738,8 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -696,8 +813,8 @@ static void MX_GPIO_Init(void)
   HAL_NVIC_SetPriority(EXTI3_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI3_IRQn);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -726,7 +843,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM6) {
+  if (htim->Instance == TIM6)
+  {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
@@ -748,8 +866,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

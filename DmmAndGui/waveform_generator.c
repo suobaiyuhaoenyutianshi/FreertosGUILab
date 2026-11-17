@@ -45,9 +45,12 @@
 #define WAVE_FS_MAX      500000.0f   // 硬件上限：DAC+DMA 能稳定跑到的最高更新率 500kHz
 #define WAVE_DAC_MID     1241        // 输出中点：1.0V 对应的码值 = 1.0/3.3*4095 ≈ 1241
 
-DAC_HandleTypeDef hdac;          // DAC 句柄
+/* hdac / htim5 由 CubeMX 生成的 main.c 定义并初始化（.ioc 里已启用 DAC 与 TIM5）。
+ * 这里必须用 extern，不能再定义一份，否则链接时报 multiple definition。 */
+extern DAC_HandleTypeDef hdac;   // DAC 句柄
+extern TIM_HandleTypeDef htim5;  // 触发用定时器（TRGO = UPDATE）
+/* DAC 的 DMA 通道不在 CubeMX 配置里，仍由本文件自己管理和定义 */
 DMA_HandleTypeDef hdma_dac_ch1;  // DAC 通道1 的 DMA 句柄（DMA2_Channel3）
-TIM_HandleTypeDef htim5;         // 触发用定时器（TRGO = UPDATE）
 
 static uint16_t usWaveTable[WAVE_TABLE_MAX];   // 一个周期的波形码值（0~4095 ↔ 0~3.3V）
 static uint16_t usWaveLength = WAVE_TABLE_MAX; // 本周期实际用几个点 N（≤1000）
@@ -69,11 +72,12 @@ static void prvRestartDAC(void);
  *        这里只负责"参数"和"DMA 链接"，所以不会和重新生成代码冲突
  */
 void vWaveGenInit(void){
-    DAC_ChannelConfTypeDef sConfig = {0};
-    TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-    TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-    /* 1. DAC_CH1 用 DMA2_Channel3 循环搬运波形表（DMA2 与 LCD/ADC/USART 用的 DMA1 不冲突） */
+    /* DAC/TIM5 的句柄定义、时钟、PA4、触发源(T5_TRGO)、TRGO=UPDATE 都已经由
+     * CubeMX 生成的 MX_DAC_Init() / MX_TIM5_Init() 完成（main.c 在调用本函数之前执行）。
+     * 这里只补 CubeMX 没做、而 HAL_DAC_Start_DMA 必需的两件事：
+     *   ① DMA2_Channel3 的通道配置（.ioc 里没有配 DAC 的 DMA）
+     *   ② 把 DMA 句柄链接进 hdac（HAL_DAC_Start_DMA 内部用 hdac.DMA_Handle1）
+     * 重复调用 HAL_DAC_Init()/HAL_TIM_Base_Init() 反而会覆盖 CubeMX 生成的配置。 */
     __HAL_RCC_DMA2_CLK_ENABLE();
     hdma_dac_ch1.Instance = DMA2_Channel3;
     hdma_dac_ch1.Init.Direction = DMA_MEMORY_TO_PERIPH;      // 内存(表) → 外设(DAC)
@@ -89,43 +93,7 @@ void vWaveGenInit(void){
     }
     HAL_NVIC_SetPriority(DMA2_Channel3_IRQn, 5, 0); // 5 = FreeRTOS 允许调用 FromISR API 的最低优先级
     HAL_NVIC_EnableIRQ(DMA2_Channel3_IRQn);
-
-    /* 2. DAC：由 TIM5 的 TRGO 触发，输出缓冲关闭（时钟与 PA4 由 CubeMX 生成的 HAL_DAC_MspInit 完成） */
-    hdac.Instance = DAC;
-    if (HAL_DAC_Init(&hdac) != HAL_OK)
-    {
-        Error_Handler();
-    }
     __HAL_LINKDMA(&hdac, DMA_Handle1, hdma_dac_ch1); // HAL_DAC_Start_DMA 内部要用 DMA_Handle1，必须先链接
-    sConfig.DAC_Trigger = DAC_TRIGGER_T5_TRGO;       // 触发源 = TIM5 TRGO（硬件定时，无需 CPU）
-    sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_DISABLE; // 关闭内部输出缓冲（与参考工程一致）
-    if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* 3. TIM5：PSC/ARR 决定采样率，TRGO = UPDATE（每溢出一次触发一次 DAC 转换） */
-    htim5.Instance = TIM5;
-    htim5.Init.Prescaler = 71;      // 先给个初值，真正数值由 prvAutoSampleRate() 按频率改写
-    htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim5.Init.Period = 1;
-    htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    htim5.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE; // ARR 改了立刻生效，不用等下一周期
-    if (HAL_TIM_Base_Init(&htim5) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;    // 时钟来自 APB1（72MHz）
-    if (HAL_TIM_ConfigClockSource(&htim5, &sClockSourceConfig) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;          // ★TRGO 输出"更新事件"给 DAC
-    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-    if (HAL_TIMEx_MasterConfigSynchronization(&htim5, &sMasterConfig) != HAL_OK)
-    {
-        Error_Handler();
-    }
 
     prvRestartDAC(); // 装载波形并开始输出
 }
@@ -165,6 +133,8 @@ void vWaveGenSetFrequency(float fFrequency){
  *     ARR = 72M/500k − 1 = 143 → 每 2µs 推一个点 → 10 点 × 2µs = 20µs → 正好 50kHz
  * @注意：N 是取整的（+0.5 四舍五入），实际频率 = fs/N，两者不整除时会有小误差
  */
+
+ 
 static void prvAutoSampleRate(void){
     uint32_t uSampleRate = 1000 * (uint32_t)fWaveFrequency; // 理想采样率 = 1000 点/周期
 
@@ -178,6 +148,7 @@ static void prvAutoSampleRate(void){
     }
 
     // TIM5: 72MHz/(PSC+1)/(ARR+1) = fs  →  PSC=0, ARR = 72M/fs - 1
+    
     __HAL_TIM_SET_PRESCALER(&htim5, 0);
     __HAL_TIM_SET_AUTORELOAD(&htim5, (uint16_t)(72e6f / uSampleRate) - 1);
 }
@@ -257,7 +228,6 @@ static void prvRestartDAC(void){
 
     prvAutoSampleRate();     // 先按频率算采样率 fs 和每周期点数 N
     prvPrepareWaveformData();// 再按形状算波形表
-
     HAL_DAC_Start_DMA(&hdac, DAC_CHANNEL_1, (const uint32_t *)usWaveTable, usWaveLength, DAC_ALIGN_12B_R);
     HAL_TIM_Base_Start(&htim5);
 }
