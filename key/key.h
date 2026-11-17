@@ -7,6 +7,7 @@
 // 路由宏
 #define ROUTE_QUEUE   0
 #define ROUTE_SEM     1
+#define ROUTE_SLOW    2   // 慢回调专用队列：KEYU/KEYD 这类会重配硬件、重算波表的键
 typedef struct{
      //检测按钮的回调 主要检测按钮的替换
     GPIO_PinState (*keyReadPin)(void);
@@ -30,11 +31,13 @@ void keyInit(key_Handle* key);
 
 typedef void (*Vjob_fuc)(void* arg);
 typedef struct{
-    
-    Vjob_fuc xfu;
     void* arg;//函数的参数
+    Vjob_fuc xfu;
 }job_t;
 extern QueueHandle_t xKeysQue;//记得在负责所有键检测 需要为创建的队列给大小  别忘了
+/* 慢回调专用队列：KEYU/KEYD 共用，由唯一的 KEYSLOW 任务按顺序执行，
+ * 避免慢回调堵住公共队列，也避免两个任务并发操作同一批 UI 状态和 DAC/TIM5 */
+extern QueueHandle_t xSlowKeyQue;
 /*KEY1 -> PC9 -> IPU
 KEY2 -> PA8 -> IPU
 KEY3 -> PC15 ->IPU

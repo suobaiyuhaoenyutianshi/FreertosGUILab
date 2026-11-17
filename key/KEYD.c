@@ -25,7 +25,9 @@ void keyDScan(void){
 }
 
 void keyDInit(void){
-    KeyD.rounte = ROUTE_QUEUE;
+    /* 与 KEYU 一样走慢队列：回调会重算波表、重配 DAC/TIM5，
+     * 交给唯一的 KEYSLOW 任务串行执行，避免堵公共队列和并发改硬件 */
+    KeyD.rounte = ROUTE_SLOW;
     KeyD.xSem   = NULL;
     KeyD.Init.arg = NULL;
     KeyD.Init.ClickCallback = keyDCallback;
