@@ -8,13 +8,16 @@ set(MX_Defines_Syms
     $<$<CONFIG:Debug>:DEBUG>
 )
 
+# HAL/CMSIS 已随仓库提供，换机器 clone 后无需安装 STM32CubeF1 包
+set(HAL_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/stm32cube_f1)
+
 # STM32CubeMX generated include paths
 set(MX_Include_Dirs
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Inc
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Inc
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/CMSIS/Device/ST/STM32F1xx/Include
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/CMSIS/Include
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Inc
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Inc/Legacy
+    ${HAL_ROOT}/CMSIS/Device/ST/STM32F1xx/Include
+    ${HAL_ROOT}/CMSIS/Include
 )
 
 # STM32CubeMX generated application sources
@@ -31,26 +34,26 @@ set(MX_Application_Src
 # STM32 HAL/LL Drivers
 set(STM32_Drivers_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Core/Src/system_stm32f1xx.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
-    C:/Users/zhouhaoen/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
+    ${HAL_ROOT}/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
 )
 
 # Drivers Midllewares
