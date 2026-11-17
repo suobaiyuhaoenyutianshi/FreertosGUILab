@@ -11,7 +11,7 @@
                 "C:/stm32configuration/OpenOCD-20260302-0.12.0/share/openocd/scripts/interface/stlink.cfg",
                 "C:/stm32configuration/OpenOCD-20260302-0.12.0/share/openocd/scripts/target/stm32f1x.cfg"
             ],
-            "executable": "C:/flushbonading/FreertosGUILab/build/Debug/FreertosGUILab.elf",
+            "executable": "C:/Users/zhouhaoen/OneDrive/Desktop/FreertosGUILab/build/Debug/FreertosGUILab.elf",
             "svdFile": "./STM32F103.svd",
             "liveWatch": {
                 "enabled": true,

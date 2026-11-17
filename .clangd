@@ -1,10 +1,7 @@
 CompileFlags:
-  CompilationDatabase: build/Debug
-Completion:
-  ShowParameterTypes: false
-CompileFlags:
+  Compiler: C:\Users\zhouhaoen\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe
   Add:
-    - -DSTM32F103xB
+    - -DSTM32F103xE
     - -DUSE_HAL_DRIVER
     - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1
     - -isystemC:\Users\zhouhaoen\.eide\tools\gcc_arm\arm-none-eabi\include\c++\15.2.1\arm-none-eabi\thumb\v7-m\nofp
@@ -28,7 +25,10 @@ CompileFlags:
     - --split_ldm
     - --execute_only
     - -Otime
-  CompilationDatabase: ./build/FreertosGUILab
-  Compiler: C:\Users\zhouhaoen\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe
+# CubeMX 生成的 hal_conf.h 单独打开时，HAL 头之间的递归包含会先用到
+# HAL_StatusTypeDef、后定义它，clangd 会误报 "unknown type name"。
+# 它不是真正的编译单元，这里只对这一条诊断关掉；.c 里的真实错误不受影响。
+If:
+  PathMatch: Core/Inc/stm32f1xx_hal_conf.h
 Diagnostics:
-  Suppress: []
+  Suppress: [unknown_typename]

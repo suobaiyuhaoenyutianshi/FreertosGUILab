@@ -21,8 +21,6 @@ endif()
 # Set the project name
 set(CMAKE_PROJECT_NAME FreertosGUILab)
 
-# Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -68,3 +66,17 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     # Add user defined libraries
 )
 include(${CMAKE_CURRENT_SOURCE_DIR}/user_sources.cmake)
+
+# ---------------------------------------------------------------------------
+# 把 compile_commands.json 复制到工程根目录，供 clangd 自动发现。
+# 原因：.clangd 里的 CompileFlags.CompilationDatabase 在部分 clangd（如本机的
+# 21.1.8）上只对头文件推断生效、对 .c 文件查不到，导致整个工程按"无编译参数"
+# 解析、报一堆假错误。clangd 会从源文件目录逐级向上找 compile_commands.json，
+# 放在根目录最稳。每次链接成功后刷新，保证和 build 目录里的那份一致。
+# ---------------------------------------------------------------------------
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${CMAKE_BINARY_DIR}/compile_commands.json
+            ${CMAKE_SOURCE_DIR}/compile_commands.json
+)
+
