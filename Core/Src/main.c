@@ -62,6 +62,9 @@
 /* UART1 守门员任务由 App_USART1_Init() 内部创建，栈深度固定 256（见 app_usart1_dma.c） */
 #define TASK_STACK_UART1_TX     256
 /* 浮点换算任务的深度由 DmmAndGui/waveFormCapture.h 里的 WAVE_CAPTURE_TASK_STACK_WORDS 统一定义 */
+
+/* 启动版本行：串口 115200 输出的第一行，用于确认烧进去的是哪次构建 */
+#define FW_VERSION  "0.1.0"
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -109,6 +112,20 @@ static void MX_IWDG_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/* 读 RCC->CSR 的复位标志。标志是粘滞的，调用方读完要 __HAL_RCC_CLEAR_RESET_FLAGS()，
+ * 否则下一次复位会把上次的原因一起带出来。 */
+static const char *pcResetCause(void)
+{
+    uint32_t csr = RCC->CSR;
+    if (csr & RCC_CSR_IWDGRSTF) return "IWDG";
+    if (csr & RCC_CSR_WWDGRSTF) return "WWDG";
+    if (csr & RCC_CSR_LPWRRSTF) return "LPWR";
+    if (csr & RCC_CSR_SFTRSTF)  return "SOFT";
+    if (csr & RCC_CSR_PORRSTF)  return "POR";
+    if (csr & RCC_CSR_PINRSTF)  return "PIN";
+    return "UNKNOWN";
+}
+
 /* ====================== 【调试练习】故意制造一次 HardFault ======================
  * 目的：练习读 stm32f1xx_it.c 里 hardfault_dump() 抓到的那一堆寄存器。
  *
@@ -256,6 +273,13 @@ int main(void)
   //MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
   App_USART1_Init();
+  /* 启动版本行：上电后串口第一行，先取复位原因再清标志 */
+  {
+    const char *pcReset = pcResetCause();
+    __HAL_RCC_CLEAR_RESET_FLAGS();
+    App_USART1_Printf("fw ver %s | build %s %s | reset %s\r\n",
+                      FW_VERSION, __DATE__, __TIME__, pcReset);
+  }
    vLCDEventGroupInit(); // 在调度器启动前静态创建 xEventLcd，避免 ADC 注入 ISR 提前使用 NULL
   vDMMInit();
  
