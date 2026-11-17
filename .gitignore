@@ -1,0 +1,16 @@
+# 构建产物（CMake/Ninja 输出、elf/map、根目录下由构建复制出来的 compile_commands.json）
+build/
+compile_commands.json
+*.elf
+*.map
+*.bin
+*.hex
+
+# 编辑器/工具缓存
+.cache/
+.screenshots/
+temp/
+
+# 系统垃圾
+Thumbs.db
+desktop.ini
