@@ -1,0 +1,39 @@
+flowchart LR
+  classDef bm fill:#24344d,stroke:#5c7cfa,color:#e7f0ff,stroke-width:1px
+  classDef edge fill:#332a4d,stroke:#9775fa,color:#ede9fe,stroke-width:1px
+  classDef rtos fill:#1f3b2e,stroke:#40c057,color:#d3f9d8,stroke-width:1px
+  classDef rule fill:#4a1f24,stroke:#ff6b6b,color:#ffe3e3,stroke-width:1px
+
+  subgraph A["确定性事件域 A · 裸机风格"]
+    direction TB
+    A1["ISR：只启停 DMA / 置位"]:::bm
+    A2["1 ms 节拍 + 软件分频"]:::bm
+    A3["确定性状态机<br/>按键 / 换算 / 健康检查"]:::bm
+    A4["静态内存 · 无 malloc"]:::bm
+    A1 --> A2 --> A3 --> A4
+  end
+
+  subgraph B["边界 · 单向传递"]
+    direction TB
+    B1["事件组位<br/>重绘请求"]:::edge
+    B2["邮箱 / 双缓冲快照<br/>DMMData / fWaveform"]:::edge
+    B3["任务通知<br/>帧就绪"]:::edge
+  end
+
+  subgraph C["阻塞/图形域 B · 保留 FreeRTOS"]
+    direction TB
+    C1["LCD 任务 prio1<br/>SPI DMA 长阻塞 ~100 ms"]:::rtos
+    C2["UART1_TX 任务<br/>printf 队列"]:::rtos
+    C3["MemMon / LED<br/>低频管理"]:::rtos
+  end
+
+  A4 --> B1 --> C1
+  A4 --> B2 --> C1
+  A4 --> B3 --> C2
+
+  R["边界三条规则<br/>① 单写者：核心只写，任务只读<br/>② 传值快照：不传共享指针<br/>③ ISR 不等待：不拿锁 / 不 malloc / 不延时"]:::rule
+  B -.-> R
+
+  style A fill:#141414,stroke:#555,color:#ffffff
+  style B fill:#141414,stroke:#555,color:#ffffff
+  style C fill:#141414,stroke:#555,color:#ffffff

@@ -1,0 +1,21 @@
+block-beta
+  columns 5
+  classDef title fill:#141414,stroke:#141414,color:#ffffff,font-size:17px
+  classDef isr fill:#24344d,stroke:#5c7cfa,color:#e7f0ff,stroke-width:1px
+  classDef hw fill:#3d3320,stroke:#f0a020,color:#fff4d6,stroke-width:1px
+  classDef task fill:#1f3b2e,stroke:#40c057,color:#d3f9d8,stroke-width:1px
+  classDef note fill:#4a1f24,stroke:#ff6b6b,color:#ffe3e3,stroke-width:1px
+  T0["FreertosGUILab 现状分层：ISR 生产 → 硬件 DMA → 任务消费"]:5
+  L1["① 中断层：5 个事件源，全部只做启停 DMA / 置位 / 通知任务"]:5
+  E1["EXTI3 ISR · prio5<br/>PA3 上升沿 / 强制触发<br/>启动 1024 点 ADC DMA"] E2["ADC1_2 ISR · prio15<br/>注入组 JEOC · 10 Hz<br/>算 VDDA / DMM / 触发电平"] E3["DMA1_Ch1 ISR · prio6<br/>ADC 常规组完成<br/>切双缓冲 + 通知"] E4["DMA1_Ch3 ISR · prio5<br/>SPI1 TX 完成<br/>give xSemForDMa"] E5["DMA1_Ch4 ISR · prio5<br/>USART1 TX 完成<br/>give xTxDmaSem"]
+  L2["② 硬件链路：采样 / 输出 / 显示全部走 DMA，CPU 只搬索引"]:5
+  H1["TIM3 127.66 kHz<br/>→ ADC1 常规组"] H2["TIM2 10 Hz<br/>→ ADC1 注入组"] H3["TIM5 → DAC1<br/>→ DMA2_Ch3 循环"] H4["SPI1 18 MHz<br/>→ LCD（DMA1_Ch3）"] H5["USART1 115200<br/>→ DMA1_Ch4"]
+  L3["③ 任务层：优先级 1~4，事件 / 周期驱动"]:5
+  T1["KEYSCAN prio2 · 10 ms<br/>6 键扫描"] T2["KEYWORK / KEYSLOW prio1<br/>执行回调：切面板 / 重算波表"] T3["float_archIT prio2<br/>1024 点浮点换算"] T4["LCD prio1<br/>9 个重绘位聚合"] T5["UART1_TX prio2<br/>printf 队列 + DMA"]
+  L4["④ 现状批注（详见文档 §5）"]:5
+  N1["🔴 LCD 是唯一慢消费者<br/>波形位 50~70 Hz，单次绘制约 100 ms"] N2["🔴 注入组只配 3 个 rank<br/>代码却读 RANK_4 → 触发电平无效"] N3["🟠 KEYSLOW 串行化是有意设计<br/>裸机改造不要塞回 ISR"] N4["ℹ️ Tmr Svc prio4<br/>HOLDoff / forceTrigger"] N5["ℹ️ MemMon / LED1<br/>2 s 堆栈水位 / 1.5 s 闪灯"]
+  class T0,L1,L2,L3,L4 title
+  class E1,E2,E3,E4,E5 isr
+  class H1,H2,H3,H4,H5 hw
+  class T1,T2,T3,T4,T5 task
+  class N1,N2,N3,N4,N5 note

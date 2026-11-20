@@ -1,5 +1,6 @@
 # 1. 收集所有 .c（只收集 .c，不要收集 .h）
-file(GLOB_RECURSE USER_SOURCES
+# CONFIGURE_DEPENDS：构建前自动重新扫描目录，新增/删除 .c 无需手动重跑 cmake --preset Debug
+file(GLOB_RECURSE USER_SOURCES CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/freeRTOS/Src/*.c" 
      "${CMAKE_CURRENT_SOURCE_DIR}/key/*.c" 
     "${CMAKE_CURRENT_SOURCE_DIR}/LCD/*.c"
@@ -7,10 +8,11 @@ file(GLOB_RECURSE USER_SOURCES
       # 如果有就加
 )
 # 1.1 Core/Src 只收本项目自己写的文件。
-# CubeMX 已经在 cmake/stm32cubemx/CMakeLists.txt 里把 main.c / it.c / msp.c /
-# timebase / system_stm32f1xx.c / sysmem.c / syscalls.c 加进工程了，
-# 这里若再用 *.c 全量 GLOB 会把它们编译两次 -> 链接时报 multiple definition。
-file(GLOB USER_SOURCES_CORE "${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/*.c")
+# cmake/stm32cubemx/CMakeLists.txt 已经负责这些文件：main.c / it.c / msp.c /
+# timebase / sysmem.c / syscalls.c 加入主目标，system_stm32f1xx.c 加入
+# STM32_Drivers 目标。这里若重复收集，system_stm32f1xx.c 会在两个目标各编译
+# 一份 -> 链接时报 multiple definition。
+file(GLOB USER_SOURCES_CORE CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/*.c")
 list(FILTER USER_SOURCES_CORE EXCLUDE REGEX
     "/main\\.c$|/stm32f1xx_it\\.c$|/stm32f1xx_hal_msp\\.c$|/stm32f1xx_hal_timebase_tim\\.c$|/system_stm32f1xx\\.c$|/sysmem\\.c$|/syscalls\\.c$")
 list(APPEND USER_SOURCES ${USER_SOURCES_CORE})

@@ -39,6 +39,7 @@ DMMData_t xDMMGetData(void){
 float fGetVdda(void){
     return fVddaNow;
 }
+
 //
 // @作用：获取万用表的当前挡位
 // @返回：挡位值。eDMMRange2V - 2V电压挡 eDMMRange10V - 10V电压挡 eDMMRange50V - 50V电压挡
@@ -145,8 +146,9 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc){
 		DMMRange_t eDMMRange = DMM_GetRange(); // 获取当前挡位
 		float fDMMValue = prvCalcDMMValue(fVdmm_adc, eDMMRange); // 计算结果
 
-		// 触发电平：注入组第 4 路（PA0 上的触发电位器）
-		float fTriggerLevel = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_4) / 4095.0f * 3.3f * 2.0f - 2.5f;
+		// 触发电平：PA0 电位器（ADC1_IN0）供外部比较器作参考，同时由注入组
+		// 第 4 路读回，用于屏幕画触发电平参考线。换算与波形通道保持一致。
+		float fTriggerLevel = HAL_ADCEx_InjectedGetValue(hadc, ADC_INJECTED_RANK_4) / 4095.0f * fVddaNow * 2.0f - 2.0f;
 
 		DMMData_t xDmmData;
 

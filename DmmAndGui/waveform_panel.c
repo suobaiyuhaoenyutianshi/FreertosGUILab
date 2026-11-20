@@ -54,7 +54,7 @@ void RepaintWaveformPanel(void)
 	waveformParam.Waveform = fDrawBuffer;                    // 指向私有快照，不再指向双缓冲
 	waveformParam.WaveLength = 1024;
 	waveformParam.SampleRate = uWaveCaptureGetSampleRate(); // 采样率随时基联动，必须动态取
-	waveformParam.Trigger = xDMMGetData().fTriggerLevel;    // 触发电平（注入组第 4 路）
+	waveformParam.Trigger = xDMMGetData().fTriggerLevel;    // 触发电平（PA0 电位器，硬件比较器参考）
 	waveformParam.XScale = fGetXScale();
 	waveformParam.YScale = fGetYScale();
 	waveformParam.CursorX1Pct = GetCursorX1Pct();

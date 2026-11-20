@@ -1,0 +1,36 @@
+block-beta
+  columns 5
+  classDef title fill:#141414,stroke:#141414,color:#ffffff,font-size:17px
+  classDef isr fill:#24344d,stroke:#5c7cfa,color:#e7f0ff,stroke-width:1px
+  classDef hw fill:#3d3320,stroke:#f0a020,color:#fff4d6,stroke-width:1px
+  classDef task fill:#1f3b2e,stroke:#40c057,color:#d3f9d8,stroke-width:1px
+  classDef ipc fill:#332a4d,stroke:#9775fa,color:#ede9fe,stroke-width:1px
+  T0["五条数据链路：每一行都是 生产者 → 数据对象 → 消费者"]:5
+  A1["EXTI3 ISR<br/>PA3 上升沿 / 强制"] A2["TIM3 127.66 kHz<br/>ADC 常规组 · 8.02 ms/帧"] A3["DMA1_Ch1 ISR<br/>1024 点完成"] A4["float_archIT<br/>1024 点换算 1~2 ms"] A5["LCD<br/>快照 + 绘制 ≈100 ms"]
+  A1 --> A2
+  A2 --> A3
+  A3 --> A4
+  A4 --> A5
+  B1["TIM2 10 Hz<br/>TRGO"] B2["ADC1_2 ISR<br/>10 Hz 算 DMM"] B3["xDMM 邮箱<br/>1 × DMMData"] B4["LCD 标签<br/>PWR / DMM"] space
+  B1 --> B2
+  B2 --> B3
+  B3 --> B4
+  C1["KEYSLOW<br/>重算 1000 点波表"] C2["vWaveGenSet*<br/>停 → 算 → 填 → 启"] C3["TIM5 + DAC1<br/>DMA2 循环"] C4["PA4 模拟输出"] space
+  C1 --> C2
+  C2 --> C3
+  C3 --> C4
+  D1["KEYSCAN<br/>10 ms"] D2["xKeysQue / xSlowKeyQue<br/>10 × job_t"] D3["KEYWORK / KEYSLOW<br/>执行回调"] D4["xEventLcd<br/>9 个重绘位"] D5["LCD<br/>串行消费"]
+  D1 --> D2
+  D2 --> D3
+  D3 --> D4
+  D4 --> D5
+  E1["App_USART1_Printf<br/>任意任务"] E2["xTxQueue<br/>5 × char*"] E3["UART1_TX<br/>prio2"] E4["USART1 DMA<br/>115200"] E5["DMA1_Ch4 ISR<br/>give xTxDmaSem → 唤醒 TX"]
+  E1 --> E2
+  E2 --> E3
+  E3 --> E4
+  E4 --> E5
+  class T0 title
+  class A1,A3,B2,E5 isr
+  class A2,B1,C3,E4,C4 hw
+  class A4,A5,B4,C1,D1,D3,D5,E3 task
+  class B3,C2,D2,D4,E2 ipc

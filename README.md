@@ -12,7 +12,7 @@ STM32F103RCT6 + FreeRTOS 的示波器/万用表 GUI 固件：SPI+DMA 刷屏、AD
 | 调试器 | ST-Link（SWD：PA13/PA14） |
 | 串口 | USART1，PA9(TX)/PA10(RX)，115200 8N1，USB-TTL |
 | LCD | SPI1 + DMA，240×320，背光/复位/RS 见 `FreertosGUILab.ioc` |
-| 模拟输入 | ADC1 注入组（CH8/CH9 + VREFINT），TIM2 TRGO 触发 |
+| 模拟输入 | ADC1 注入组（CH0/CH8/CH9 + VREFINT），TIM2 TRGO 触发；PA0 为触发电平电位器，PA3 为示波器触发输入 |
 | 波形输出 | DAC_CH1(PA4)，TIM5 TRGO 触发，DMA2_Channel3 循环搬运 |
 | 按键 | KEY1~KEY4（公共队列）、KEYU/KEYD（慢回调专用队列） |
 
