@@ -18,7 +18,14 @@
 //extern const uint16_t image1[160 * 120];
 //extern const uint16_t image2[160 * 120];
 static SemaphoreHandle_t xSemForDMa;
-static volatile uint32_t s_lcdSpiErrCount = 0; // 调试用：SPI 启动失败/超时次数
+
+// LCD/SPI 调试统计：DWT 周期数，72 cycle = 1 us @72 MHz
+volatile uint32_t g_lcdSpiErrCount = 0;       // SPI 启动失败/超时次数
+volatile uint32_t g_lcdSpiLastCycles = 0;     // 最近一次数据 DMA 的墙钟耗时
+volatile uint32_t g_lcdSpiMaxCycles = 0;      // 数据 DMA 最大耗时（含超时）
+volatile uint32_t g_lcdTaskLastCycles = 0;    // 最近一次 LCD 任务处理事件组的耗时
+volatile uint32_t g_lcdTaskMaxCycles = 0;     // LCD 任务处理事件组的最大耗时
+volatile uint32_t g_lcdWaveformFrames = 0;    // 波形面板重绘次数
 static void PrvSendCommand(uint8_t pData);
 static void PrvSendData(uint8_t* pData,uint16_t size);
 static void prvShowImage(uint16_t* image);
@@ -88,7 +95,7 @@ static void PrvSendCommand(uint8_t pData){
 	if(HAL_SPI_Transmit(&hspi1,&pData,1,pdMS_TO_TICKS(10)) != HAL_OK)
 	{
 		// 单字节命令也加超时：SPI 卡死时不要把 LCD 任务永久挂住
-		s_lcdSpiErrCount++;
+		g_lcdSpiErrCount++;
 		(void)HAL_SPI_Abort(&hspi1);
 	}
 	//取消选中
@@ -96,6 +103,8 @@ static void PrvSendCommand(uint8_t pData){
 
 }
 static void PrvSendData(uint8_t* pData,uint16_t size){
+	uint32_t ulT0 = DWT->CYCCNT;
+
 	// 清掉上一次可能残留的信号量，避免 DMA 还没完成就提前释放 CS
 	(void)xSemaphoreTake(xSemForDMa, 0);
 
@@ -106,19 +115,25 @@ static void PrvSendData(uint8_t* pData,uint16_t size){
 
 	if(HAL_SPI_Transmit_DMA(&hspi1,pData,size) != HAL_OK)
 	{
-		// 启动 DMA 失败（例如 SPI 还 BUSY）：释放 CS、Abort，丢掉这一帧
-		s_lcdSpiErrCount++;
+		// 启动 DMA 失败（例如 SPI 还 BUSY）：Abort，丢掉这一帧
+		g_lcdSpiErrCount++;
 		(void)HAL_SPI_Abort(&hspi1);
-		HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_SET);
-		return;
+		goto done;
 	}
 
 	if(xSemaphoreTake(xSemForDMa,pdMS_TO_TICKS(100)) != pdTRUE)
 	{
 		// DMA 完成中断没来：Abort 并清掉可能迟到的信号量，下一帧重新来
-		s_lcdSpiErrCount++;
+		g_lcdSpiErrCount++;
 		(void)HAL_SPI_Abort(&hspi1);
 		(void)xSemaphoreTake(xSemForDMa, 0);
+	}
+
+done:
+	g_lcdSpiLastCycles = DWT->CYCCNT - ulT0;
+	if(g_lcdSpiLastCycles > g_lcdSpiMaxCycles)
+	{
+		g_lcdSpiMaxCycles = g_lcdSpiLastCycles;
 	}
 
 	//取消选中
@@ -161,6 +176,7 @@ void vLCDTask(void *pvParameters)
 	{	// testLcd++;
 		EventBits_t allKeys;
 		allKeys = xEventGroupWaitBits(xEventLcd,ALL_REPAINT_BITS,pdTRUE,pdFALSE,portMAX_DELAY);
+		uint32_t ulT0 = DWT->CYCCNT;
 		//vTaskDelay(pdMS_TO_TICKS(10));
 			/*prvShowImage(image1);
 		vTaskDelay(pdMS_TO_TICKS(200));
@@ -202,11 +218,14 @@ void vLCDTask(void *pvParameters)
 		if( allKeys& WAVEFORM_PANEL_REPAINT_BIT)
 		{
 			RepaintWaveformPanel(); // 重绘波形面板
+			g_lcdWaveformFrames++;
 		}
 
-
-
-
+		g_lcdTaskLastCycles = DWT->CYCCNT - ulT0;
+		if(g_lcdTaskLastCycles > g_lcdTaskMaxCycles)
+		{
+			g_lcdTaskMaxCycles = g_lcdTaskLastCycles;
+		}
 
 	}
 }

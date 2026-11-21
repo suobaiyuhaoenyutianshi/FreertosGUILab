@@ -14,6 +14,16 @@ static UBaseType_t uxMonitoredTaskStackWords[MAX_MONITORED_TASKS];
 /** 当前已注册的任务数量 */
 static uint8_t ucMonitoredTaskCount = 0;
 
+// LCD/SPI 统计（DWT 周期，72 cycle = 1 us @72 MHz）
+extern volatile uint32_t g_lcdSpiLastCycles;
+extern volatile uint32_t g_lcdSpiMaxCycles;
+extern volatile uint32_t g_lcdTaskLastCycles;
+extern volatile uint32_t g_lcdTaskMaxCycles;
+extern volatile uint32_t g_lcdWaveformFrames;
+extern volatile uint32_t g_lcdSpiErrCount;
+
+static uint32_t ulLastLcdWaveformFrames = 0;
+
 static void prvMemoryMonitorTask( void * pvParameters );
 
 /**
@@ -135,6 +145,26 @@ static void prvMemoryMonitorTask( void * pvParameters )
 
         // 监控任务自己也算一个：不判断它的话，打印时会把自己的栈撑爆而没人知道
         prvPrintOneTaskStack( xTaskGetCurrentTaskHandle(), MONITOR_TASK_STACK_SIZE );
+
+        // LCD/SPI 统计：屏幕刷新到底慢在哪
+        uint32_t ulFrames = g_lcdWaveformFrames;
+        uint32_t ulDeltaFrames = ulFrames - ulLastLcdWaveformFrames;
+        ulLastLcdWaveformFrames = ulFrames;
+        uint32_t ulFps10 = ( uint32_t )( ( uint64_t )ulDeltaFrames * 10000u / MONITOR_INTERVAL_MS );
+
+        App_USART1_Printf( "LCD timing (DWT, 72 cycle = 1 us):\n" );
+        App_USART1_Printf( "  SPI xfer   : last %u us / max %u us, errors %u\n",
+                           ( unsigned )( g_lcdSpiLastCycles / 72u ),
+                           ( unsigned )( g_lcdSpiMaxCycles / 72u ),
+                           ( unsigned )g_lcdSpiErrCount );
+        App_USART1_Printf( "  LCD task   : last %u us / max %u us\n",
+                           ( unsigned )( g_lcdTaskLastCycles / 72u ),
+                           ( unsigned )( g_lcdTaskMaxCycles / 72u ) );
+        App_USART1_Printf( "  Waveform   : %u frames / %u ms (~%u.%u fps)\n",
+                           ( unsigned )ulDeltaFrames,
+                           ( unsigned )MONITOR_INTERVAL_MS,
+                           ( unsigned )( ulFps10 / 10u ),
+                           ( unsigned )( ulFps10 % 10u ) );
         App_USART1_Printf( "=====================================\n\n" );
 
         // 延时，控制输出频率
