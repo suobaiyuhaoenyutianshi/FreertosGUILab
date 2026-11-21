@@ -36,6 +36,7 @@ void vkeyOneSca(key_Handle* key){
     GPIO_PinState  cur = key->Init.keyReadPin();
     if((cur != key->pre) && cur == GPIO_PIN_RESET){
         job_t job;
+        job.id = key->id;
         job.xfu = key->Init.ClickCallback;
         job.arg = key->Init.arg;
 

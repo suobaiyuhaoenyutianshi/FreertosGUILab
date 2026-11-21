@@ -32,10 +32,15 @@ void keyUScan(void){
  * 任务在 main.c 里创建，栈深度见 keyTask.h 的 TASK_STACK_KEY_SLOW。
  */
 void keyUInit(void){
+    KeyU.id = 5;
     KeyU.rounte = ROUTE_SLOW;
     KeyU.xSem   = NULL;   // 走慢队列，不需要信号量
     KeyU.Init.arg = NULL;
+#ifdef BM_BAREMETAL
+    KeyU.Init.ClickCallback = NULL;
+#else
     KeyU.Init.ClickCallback = keyUCallback;
+#endif
     KeyU.Init.keyReadPin    = keyUReadPin;
     keyInit(&KeyU);
 }

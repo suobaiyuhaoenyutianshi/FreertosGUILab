@@ -26,10 +26,15 @@ void key2Scan(void){
 }
 
 void key2Init(void){
+    Key2.id = 2;
     Key2.rounte = ROUTE_QUEUE;
     Key2.xSem   = NULL;
     Key2.Init.arg = NULL;
+#ifdef BM_BAREMETAL
+    Key2.Init.ClickCallback = NULL;
+#else
     Key2.Init.ClickCallback = key2Callback;
+#endif
     Key2.Init.keyReadPin    = key2ReadPin;
     keyInit(&Key2);
 }

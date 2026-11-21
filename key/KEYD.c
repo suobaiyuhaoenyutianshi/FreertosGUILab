@@ -27,10 +27,15 @@ void keyDScan(void){
 void keyDInit(void){
     /* 与 KEYU 一样走慢队列：回调会重算波表、重配 DAC/TIM5，
      * 交给唯一的 KEYSLOW 任务串行执行，避免堵公共队列和并发改硬件 */
+    KeyD.id = 6;
     KeyD.rounte = ROUTE_SLOW;
     KeyD.xSem   = NULL;
     KeyD.Init.arg = NULL;
+#ifdef BM_BAREMETAL
+    KeyD.Init.ClickCallback = NULL;
+#else
     KeyD.Init.ClickCallback = keyDCallback;
+#endif
     KeyD.Init.keyReadPin    = keyDReadPin;
     keyInit(&KeyD);
 }

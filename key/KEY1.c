@@ -35,11 +35,16 @@ void key1Callback(void* args){
    // HAL_GPIO_WritePin()
 }
 void key1Init(void){
+    Key1.id = 1;
     Key1.rounte = ROUTE_QUEUE;
     Key1.xSem = NULL;
   Key1.Init.arg = NULL;
   Key1.rounte = ROUTE_QUEUE;
+#ifdef BM_BAREMETAL
+   Key1.Init.ClickCallback = NULL;
+#else
    Key1.Init.ClickCallback = key1Callback;
+#endif
     Key1.Init.keyReadPin = key1ReadPin;
     keyInit(&Key1);
 }

@@ -27,10 +27,15 @@ void key3Scan(void){
 }
 
 void key3Init(void){
+    Key3.id = 3;
     Key3.rounte = ROUTE_QUEUE;
     Key3.xSem   = NULL;
     Key3.Init.arg = NULL;
+#ifdef BM_BAREMETAL
+    Key3.Init.ClickCallback = NULL;
+#else
     Key3.Init.ClickCallback = key3Callback;
+#endif
     Key3.Init.keyReadPin    = key3ReadPin;
     keyInit(&Key3);
 }

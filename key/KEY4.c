@@ -27,10 +27,15 @@ void key4Scan(void){
 }
 
 void key4Init(void){
+    Key4.id = 4;
     Key4.rounte = ROUTE_QUEUE;
     Key4.xSem   = NULL;
     Key4.Init.arg = NULL;
+#ifdef BM_BAREMETAL
+    Key4.Init.ClickCallback = NULL;
+#else
     Key4.Init.ClickCallback = key4Callback;
+#endif
     Key4.Init.keyReadPin    = key4ReadPin;
     keyInit(&Key4);
 }

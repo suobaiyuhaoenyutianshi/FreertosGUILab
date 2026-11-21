@@ -328,7 +328,7 @@ int main(void)
     job_t job;
     while (bmKeyPop(&job))
     {
-      bm_uart_printf("key cb=%08X\r\n", (unsigned)(uintptr_t)job.xfu);
+      bm_uart_printf("key id=%u\r\n", (unsigned)job.id);
     }
 
     // DMM：新数据每 500 ms 打印一次

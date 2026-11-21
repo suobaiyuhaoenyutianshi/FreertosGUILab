@@ -15,6 +15,7 @@ typedef struct{
     void* arg;//回调参数 这什么都有可能
 } InitkeyTyped;//专门放回调的
 typedef struct{
+    uint8_t id;    // 按键编号：1~4=KEY1~KEY4，5/6=KEYU/KEYD；裸机打印用
     uint8_t rounte;//路径  是记信号（几需要单独的任务不卡在队列的）  还是队列
     GPIO_PinState pre;
     InitkeyTyped Init;//存函数信息
@@ -31,6 +32,7 @@ void keyInit(key_Handle* key);
 
 typedef void (*Vjob_fuc)(void* arg);
 typedef struct{
+    uint8_t id; // 按键编号；裸机宿主没有 UI 回调时用它区分按键
     void* arg;//函数的参数
     Vjob_fuc xfu;
 }job_t;
