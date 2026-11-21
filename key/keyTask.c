@@ -54,8 +54,10 @@ void vKeySlowTask(void *pvArg){
 /*//是检测任务循环前的调用每个键的初始化  与创建消费者任务 队列QueueHandle_t xKeysQue 这个创建的大小是job_t 10个先*/
 void VkeyTotalInit(void* pvArg){
     (void) pvArg;
+#ifndef BM_BAREMETAL
     xKeysQue = xQueueCreate(10,sizeof(job_t)); // 队列项 = job_t(8字节)，与发送/接收端一致
     configASSERT(xKeysQue != NULL);
+#endif
 
     key1Init();
     key2Init();

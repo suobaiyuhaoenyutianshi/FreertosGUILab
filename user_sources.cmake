@@ -19,6 +19,12 @@ list(APPEND USER_SOURCES ${USER_SOURCES_CORE})
 # 2. 编译源文件
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${USER_SOURCES})
 
+# 裸机实验开关：只影响 main/dmm/key/bmcore 的宿主路径
+if(BM_BAREMETAL)
+    target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE BM_BAREMETAL=1)
+    message(STATUS "Bare-metal lab build: BM_BAREMETAL=1")
+endif()
+
 # 3. 添加头文件搜索路径（让编译器能找到你写的 .h）"${CMAKE_CURRENT_SOURCE_DIR}/"      # 对应上面的 .c 文件夹
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/Core/Inc"

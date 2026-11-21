@@ -148,6 +148,11 @@ void hardfault_dump(uint32_t *stack, uint32_t exc_return)
     hf_ctx.bfar   = SCB->BFAR;           // 出错访问的数据地址(0xE000ED38)
     hf_ctx.mmfar  = SCB->MMFAR;          // MemManage 坏地址(0xE000ED34，CFSR 低 8 位非 0 时看)
 
+#ifdef BM_BAREMETAL
+    // 裸机宿主没有 FreeRTOS 任务上下文
+    hf_ctx.cur_task = 0;
+    hf_ctx.task_name = NULL;
+#else
     // 记下崩在哪个任务(FreeRTOS)：调度器没起来时句柄为 NULL，跳过，避免二次崩溃
     hf_ctx.cur_task = (uint32_t)xTaskGetCurrentTaskHandle();
     if (hf_ctx.cur_task != 0)
@@ -158,6 +163,7 @@ void hardfault_dump(uint32_t *stack, uint32_t exc_return)
     {
         hf_ctx.task_name = NULL;
     }
+#endif
 
     while (1);   /* 停在这里，Watch hf_ctx 即可一次看完全部现场 */
 }

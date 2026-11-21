@@ -34,6 +34,10 @@ typedef struct{
     void* arg;//函数的参数
     Vjob_fuc xfu;
 }job_t;
+
+#ifdef BM_BAREMETAL
+uint8_t bmKeyPop(job_t *job); // 裸机宿主：从静态环形队列取一个按键事件
+#endif
 extern QueueHandle_t xKeysQue;//记得在负责所有键检测 需要为创建的队列给大小  别忘了
 /* 慢回调专用队列：KEYU/KEYD 共用，由唯一的 KEYSLOW 任务按顺序执行，
  * 避免慢回调堵住公共队列，也避免两个任务并发操作同一批 UI 状态和 DAC/TIM5 */

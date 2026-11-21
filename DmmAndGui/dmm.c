@@ -10,7 +10,6 @@
 #include "LCD_TASK.h"
 #include "FreeRTOS.h"
 #include "event_groups.h"
-static QueueHandle_t  xMailbox; // 邮箱句柄，静态全局变量，仅文件内部可见
 static float fVddaNow = 3.3f; // 最近一次由 VREFINT 反推出的 VDDA，供其它模块换算共用
 
 // 域 A 边界：ISR 只写快照 + 序号，BmCore 在任务里消费；seq 用于判断有没有新帧
@@ -18,7 +17,14 @@ static volatile uint16_t s_dmmRaw[4] = {0};
 static volatile uint32_t s_dmmSeq = 0;
 static uint32_t s_dmmSeqSeen = 0;
 
+#ifdef BM_BAREMETAL
+// 裸机宿主：不建队列/事件组，用静态快照 + 新数据标志代替
+static DMMData_t s_bmDmmData;
+static volatile uint8_t s_bmDmmNew = 0;
+#else
+static QueueHandle_t  xMailbox; // 邮箱句柄，静态全局变量，仅文件内部可见
 extern EventGroupHandle_t xEventLcd;
+#endif
 
 static DMMRange_t DMM_GetRange(void);
 static float prvCalcDMMValue(float fVadc, DMMRange_t eRange);
@@ -27,7 +33,9 @@ extern TIM_HandleTypeDef htim2;
 
 
 void vDMMInit(void){
+#ifndef BM_BAREMETAL
     xMailbox = xQueueCreate(1,sizeof(DMMData_t));//邮箱
+#endif
 
     // 打开 DWT 周期计数器，供 ISR/BmCore 统计耗时
     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
@@ -40,9 +48,25 @@ void vDMMInit(void){
 
 }
 DMMData_t xDMMGetData(void){
+#ifdef BM_BAREMETAL
+    return s_bmDmmData;
+#else
     DMMData_t DMM;
     xQueuePeek(xMailbox,&DMM,portMAX_DELAY);
     return DMM;
+#endif
+}
+
+// 非阻塞取最新 DMM 数据：RTOS 宿主走 0 超时 peek，裸机宿主读静态快照
+uint8_t xDMMTryGetData(DMMData_t *pData){
+#ifdef BM_BAREMETAL
+    if(!s_bmDmmNew) return 0;
+    *pData = s_bmDmmData;
+    s_bmDmmNew = 0;
+    return 1;
+#else
+    return (xQueuePeek(xMailbox, pData, 0) == pdPASS) ? 1 : 0;
+#endif
 }
 
 //
@@ -191,8 +215,13 @@ void vDMMProcess(void){
 	xDmmData.fVpwr = fVpwr;
 	xDmmData.fTriggerLevel = fTriggerLevel;
 
+#ifdef BM_BAREMETAL
+	s_bmDmmData = xDmmData;
+	s_bmDmmNew = 1;
+#else
 	xQueueOverwrite(xMailbox, &xDmmData);
 	xEventGroupSetBits(xEventLcd, PWR_LABLE_REPAINT_BIT | DMM_LABLE_REPAINT_BIT);
+#endif
 }
 
 void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef* hadc){

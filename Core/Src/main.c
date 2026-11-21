@@ -37,6 +37,10 @@
 #include "waveFormCapture.h"
 #include "waveform_generator.h"
 #include <string.h>
+#ifdef BM_BAREMETAL
+#include <stdio.h>
+#include <stdarg.h>
+#endif
 #include "keyTask.h"
 #include "LCD_TASK.h"
 /* USER CODE END Includes */
@@ -228,6 +232,24 @@ void vled3Task(void* pvparameters){
 
 /* USER CODE END 0 */
 
+#ifdef BM_BAREMETAL
+// 裸机宿主的最小串口打印：阻塞发送，不依赖 FreeRTOS 打印队列
+static void bm_uart_printf(const char *fmt, ...)
+{
+  char buf[128];
+  va_list ap;
+  va_start(ap, fmt);
+  int n = vsnprintf(buf, sizeof(buf), fmt, ap);
+  va_end(ap);
+
+  if(n > 0)
+  {
+    if(n > (int)sizeof(buf) - 1) n = (int)sizeof(buf) - 1;
+    HAL_UART_Transmit(&huart1, (uint8_t *)buf, (uint16_t)n, 100);
+  }
+}
+#endif
+
 /**
   * @brief  The application entry point.
   * @retval int
@@ -236,10 +258,12 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+#ifndef BM_BAREMETAL
   TaskHandle_t LED1 ;
   TaskHandle_t KEYSWORK;
   TaskHandle_t LCD;
   TaskHandle_t KEYSLOW;
+#endif
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -272,6 +296,51 @@ int main(void)
    * 0.41s 就会复位一次，表现为 LCD 花屏 + 闪烁。若以后要用，需配套 HAL_IWDG_Refresh()。 */
   //MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
+#ifdef BM_BAREMETAL
+  {
+    const char *pcReset = pcResetCause();
+    __HAL_RCC_CLEAR_RESET_FLAGS();
+    bm_uart_printf("BM lab ver %s | build %s %s | reset %s\r\n",
+                   FW_VERSION, __DATE__, __TIME__, pcReset);
+  }
+
+  vDMMInit();          // 只启动 ADC 注入 + DWT，不建邮箱
+  VkeyTotalInit(NULL); // 初始化按键，不建 FreeRTOS 队列
+
+  // FreeRTOS 的 SysTick 仍挂在向量表里，但没有调度器；关掉它，HAL 时基用 TIM6
+  HAL_SuspendTick();
+
+  uint32_t ulLastTick = HAL_GetTick();
+  uint32_t ulLastPrint = ulLastTick;
+
+  for (;;)
+  {
+    uint32_t ulNow = HAL_GetTick();
+
+    // 1 ms 节拍：同一套 vBmCoreTick()，只是宿主从 RTOS 任务换成 main 循环
+    while (ulLastTick != ulNow)
+    {
+      ulLastTick++;
+      vBmCoreTick();
+    }
+
+    // 按键事件：裸机下不跑 UI 回调，只打印回调指针，证明 6 个键都能被扫描到
+    job_t job;
+    while (bmKeyPop(&job))
+    {
+      bm_uart_printf("key cb=%08X\r\n", (unsigned)(uintptr_t)job.xfu);
+    }
+
+    // DMM：新数据每 500 ms 打印一次
+    DMMData_t dmm;
+    if (xDMMTryGetData(&dmm) && (uint32_t)(ulNow - ulLastPrint) >= 500u)
+    {
+      ulLastPrint = ulNow;
+      bm_uart_printf("DMM=%.3f V PWR=%.3f V TRIG=%.3f V\r\n",
+                     dmm.fDMMValue, dmm.fVpwr, dmm.fTriggerLevel);
+    }
+  }
+#else
   App_USART1_Init();
   /* 启动版本行：上电后串口第一行，先取复位原因再清标志 */
   {
@@ -316,6 +385,7 @@ int main(void)
 
   vStartMemoryMonitor();
   vTaskStartScheduler();
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */

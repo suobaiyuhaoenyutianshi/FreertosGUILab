@@ -37,6 +37,13 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "MinSizeRel"
             }
+        },
+        {
+            "name": "Baremetal",
+            "inherits": "Debug",
+            "cacheVariables": {
+                "BM_BAREMETAL": "ON"
+            }
         }
     ],
     "buildPresets": [
@@ -55,6 +62,10 @@
         {
             "name": "MinSizeRel",
             "configurePreset": "MinSizeRel"
+        },
+        {
+            "name": "Baremetal",
+            "configurePreset": "Baremetal"
         }
     ]
 }

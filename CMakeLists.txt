@@ -33,6 +33,9 @@ project(${CMAKE_PROJECT_NAME})
 enable_language(C ASM)
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
+# 裸机最小闭环实验：只切换宿主，不改变默认 Debug/Release 构建
+option(BM_BAREMETAL "Build the bare-metal lab (domain A + UART)" OFF)
+
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME})
 

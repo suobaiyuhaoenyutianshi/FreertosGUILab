@@ -7,7 +7,9 @@
 // 只做短活：没有阻塞、没有 malloc、没有锁；长活仍在域 B 的 LCD/UART 任务里
 #define BMCORE_DIV_10MS 10
 
+#ifndef BM_BAREMETAL
 static TaskHandle_t xBmCoreTask = NULL;
+#endif
 
 // 调试用：可在调试器里看 BmCore 是否在跑、10 Hz 是否在走
 static volatile uint32_t g_bmCoreTicks = 0;
@@ -33,6 +35,7 @@ void vBmCoreTick(void)
     }
 }
 
+#ifndef BM_BAREMETAL
 static void vBmCoreTask(void *pvParameters)
 {
     (void)pvParameters;
@@ -57,3 +60,4 @@ TaskHandle_t xBmCoreGetTaskHandle(void)
 {
     return xBmCoreTask;
 }
+#endif
