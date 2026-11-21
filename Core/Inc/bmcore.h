@@ -8,6 +8,7 @@
 #define BMCORE_TASK_STACK_WORDS 256
 
 void vBmCoreInit(void);
+void vBmCoreTick(void); // 1 ms 调一次；RTOS 任务和裸机 main 循环共用同一套核心
 TaskHandle_t xBmCoreGetTaskHandle(void);
 
 #endif

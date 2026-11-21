@@ -13,27 +13,36 @@ static TaskHandle_t xBmCoreTask = NULL;
 static volatile uint32_t g_bmCoreTicks = 0;
 static volatile uint32_t g_bmCoreDmmTicks = 0;
 
+// @作用：域 A 的 1 ms 核心步进
+// @说明：RTOS 宿主由 BmCore 任务每 1 ms 调一次；裸机宿主可以在 main 的 1 ms
+//        节拍里直接调同一个函数。函数内部不阻塞、不 malloc、不拿锁。
+void vBmCoreTick(void)
+{
+    static uint32_t ulDiv10ms = 0;
+
+    g_bmCoreTicks++;
+
+    if(++ulDiv10ms >= BMCORE_DIV_10MS)
+    {
+        ulDiv10ms = 0;
+
+        vKeyScanStep(); // 10 ms 按键扫描：只入队，回调仍在 KEYWORK/KEYSLOW
+        vDMMProcess();  // 消费 ADC ISR 的 raw 快照，发布 DMM 邮箱/事件位
+
+        g_bmCoreDmmTicks++;
+    }
+}
+
 static void vBmCoreTask(void *pvParameters)
-{   
+{
     (void)pvParameters;
 
     TickType_t xLastWake = xTaskGetTickCount();
-    uint32_t ulDiv10ms = 0;
 
     for(;;)
     {
         vTaskDelayUntil(&xLastWake, pdMS_TO_TICKS(1));
-        g_bmCoreTicks++;
-
-        if(++ulDiv10ms >= BMCORE_DIV_10MS)
-        {
-            ulDiv10ms = 0;
-
-            vKeyScanStep(); // 10 ms 按键扫描：只入队，回调仍在 KEYWORK/KEYSLOW
-            vDMMProcess();  // 消费 ADC ISR 的 raw 快照，发布 DMM 邮箱/事件位
-
-            g_bmCoreDmmTicks++;
-        }
+        vBmCoreTick(); // 只保留“RTOS 宿主”的 1 ms 等待，核心逻辑在 vBmCoreTick()
     }
 }
 
