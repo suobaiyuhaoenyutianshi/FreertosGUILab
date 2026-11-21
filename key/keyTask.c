@@ -13,7 +13,7 @@
 
 void vKeyWorkerTask(void *pvArg);//消费者任务 队列
 void VkeyTotalInit(void* pvArg);//是检测任务循环前的调用每个键的初始化  与创建消费者任务 队列QueueHandle_t xKeysQue 这个创建的大小是job_t 10个先
-void vKeyWOrksScan(void* pvArg);//检测任务
+void vKeyScanStep(void);//单次扫描，由 BmCore 的 10 ms 分频调用
 
 
 
@@ -65,22 +65,12 @@ void VkeyTotalInit(void* pvArg){
     keyDInit();
     
 }
-//检测任务
-void vKeyWOrksScan(void* pvArg){
-    (void)pvArg;
-    VkeyTotalInit(NULL);
-    for(;;){
-      key1Scan();
-        key2Scan();
-        key3Scan();
-        key4Scan();
-        keyUScan();
-        keyDScan();
-
-        vTaskDelay(pdMS_TO_TICKS(10));
-
-    }
-
-
-
+// 单次扫描：原来在 KEYSCAN 任务里每 10 ms 做一次，现在由 BmCore 的 10 ms 分频调用
+void vKeyScanStep(void){
+    key1Scan();
+    key2Scan();
+    key3Scan();
+    key4Scan();
+    keyUScan();
+    keyDScan();
 }

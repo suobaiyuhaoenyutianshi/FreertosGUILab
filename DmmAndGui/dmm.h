@@ -22,6 +22,7 @@ typedef struct
 } DMMData_t;
 
 void vDMMInit(void);
+void vDMMProcess(void); // BmCore 10 Hz 调用：消费 ISR 的 raw 快照并发布 DMM 邮箱
 DMMData_t xDMMGetData(void);
 float fGetVdda(void); // 获取最近一次由 VREFINT 反推出的 VDDA
 

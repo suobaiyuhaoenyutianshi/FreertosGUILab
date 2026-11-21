@@ -8,5 +8,5 @@
 void vKeyWorkerTask(void *pvArg);//消费者任务 队列
 void vKeySlowTask(void *pvArg);//慢回调消费者：KEYU/KEYD 共用的唯一执行者
 void VkeyTotalInit(void* pvArg);//是检测任务循环前的调用每个键的初始化  与创建消费者任务 队列QueueHandle_t xKeysQue 这个创建的大小是job_t 10个先
-void vKeyWOrksScan(void* pvArg);//检测任务
+void vKeyScanStep(void);//单次扫描，由 BmCore 的 10 ms 分频调用
 #endif

@@ -33,6 +33,7 @@
 #include "memory_monitor.h"
 #include "app_usart1_dma.h"
 #include "dmm.h"
+#include "bmcore.h"
 #include "waveFormCapture.h"
 #include "waveform_generator.h"
 #include <string.h>
@@ -237,7 +238,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
   TaskHandle_t LED1 ;
   TaskHandle_t KEYSWORK;
-  TaskHandle_t KEYSSCAN;
   TaskHandle_t LCD;
   TaskHandle_t KEYSLOW;
   /* USER CODE END 1 */
@@ -282,11 +282,12 @@ int main(void)
   }
    vLCDEventGroupInit(); // 在调度器启动前静态创建 xEventLcd，避免 ADC 注入 ISR 提前使用 NULL
   vDMMInit();
- 
-  WaveCaptureInit(); // 波形捕捉器：互斥锁、三个软件定时器、浮点换算任务
+  VkeyTotalInit(NULL);  // 创建 xKeysQue + 初始化按键，BmCore 10 ms 扫描前必须就绪
+  vBmCoreInit();        // 域 A：1 ms 确定性节拍，10 ms 按键扫描 + 10 Hz DMM
+
+  WaveCaptureInit(); // 波形捕捉器：双缓冲、三个软件定时器、浮点换算任务
   vWaveGenInit();    // 信号发生器：DAC + TIM5 + DMA2
  
- xTaskCreate(vKeyWOrksScan,"KEYINITSCAN",TASK_STACK_KEY_SCAN,NULL,2,&KEYSSCAN);//只是扫描了key1 都小些可y1
   xTaskCreate(vKeyWorkerTask,"KEYIWORK",TASK_STACK_KEY_WORK,NULL,1,&KEYSWORK);//只有key1
   /* 慢按键队列 + 唯一执行者：KEYU/KEYD 共用。
    * 慢回调（重算波表、重启 DAC/TIM5、改时基）不占公共队列，也不会并发改硬件。
@@ -306,9 +307,9 @@ int main(void)
   vRegisterTaskForMonitoring(LED1,     TASK_STACK_LED1);//vDMMInit
   vRegisterTaskForMonitoring(LCD,      TASK_STACK_LCD);
   vRegisterTaskForMonitoring(usart1,   TASK_STACK_UART1_TX);
-  vRegisterTaskForMonitoring(KEYSSCAN, TASK_STACK_KEY_SCAN);
   vRegisterTaskForMonitoring(KEYSWORK, TASK_STACK_KEY_WORK);
   vRegisterTaskForMonitoring(KEYSLOW, TASK_STACK_KEY_SLOW);
+  vRegisterTaskForMonitoring(xBmCoreGetTaskHandle(), BMCORE_TASK_STACK_WORDS);
   /* WaveCaptureInit() 在上面的初始化区就已创建该任务，这里取句柄注册 */
   vRegisterTaskForMonitoring(xWaveCaptureGetTaskHandle(), WAVE_CAPTURE_TASK_STACK_WORDS);
   

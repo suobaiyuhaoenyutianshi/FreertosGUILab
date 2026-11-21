@@ -18,6 +18,7 @@
 //extern const uint16_t image1[160 * 120];
 //extern const uint16_t image2[160 * 120];
 static SemaphoreHandle_t xSemForDMa;
+static volatile uint32_t s_lcdSpiErrCount = 0; // 调试用：SPI 启动失败/超时次数
 static void PrvSendCommand(uint8_t pData);
 static void PrvSendData(uint8_t* pData,uint16_t size);
 static void prvShowImage(uint16_t* image);
@@ -84,19 +85,41 @@ static void PrvSendCommand(uint8_t pData){
 	HAL_GPIO_WritePin(LCD_RS_GPIO_Port,LCD_RS_Pin,GPIO_PIN_RESET);
 	//选择从机
 	HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_RESET);
-	HAL_SPI_Transmit(&hspi1,&pData,1,HAL_MAX_DELAY);;
+	if(HAL_SPI_Transmit(&hspi1,&pData,1,pdMS_TO_TICKS(10)) != HAL_OK)
+	{
+		// 单字节命令也加超时：SPI 卡死时不要把 LCD 任务永久挂住
+		s_lcdSpiErrCount++;
+		(void)HAL_SPI_Abort(&hspi1);
+	}
 	//取消选中
 	HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_SET);
 
 }
 static void PrvSendData(uint8_t* pData,uint16_t size){
+	// 清掉上一次可能残留的信号量，避免 DMA 还没完成就提前释放 CS
+	(void)xSemaphoreTake(xSemForDMa, 0);
+
 	// 切换到数据模式
 	HAL_GPIO_WritePin(LCD_RS_GPIO_Port,LCD_RS_Pin,GPIO_PIN_SET);
 	//选择从机
 	HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_RESET);
-	HAL_SPI_Transmit_DMA(&hspi1,pData,size);//只有dma完成会触发HAL_SPI_TxCpltCallback这个中断说明数据发射王  给信号下面才能进行
-	
-	xSemaphoreTake(xSemForDMa,portMAX_DELAY);
+
+	if(HAL_SPI_Transmit_DMA(&hspi1,pData,size) != HAL_OK)
+	{
+		// 启动 DMA 失败（例如 SPI 还 BUSY）：释放 CS、Abort，丢掉这一帧
+		s_lcdSpiErrCount++;
+		(void)HAL_SPI_Abort(&hspi1);
+		HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_SET);
+		return;
+	}
+
+	if(xSemaphoreTake(xSemForDMa,pdMS_TO_TICKS(100)) != pdTRUE)
+	{
+		// DMA 完成中断没来：Abort 并清掉可能迟到的信号量，下一帧重新来
+		s_lcdSpiErrCount++;
+		(void)HAL_SPI_Abort(&hspi1);
+		(void)xSemaphoreTake(xSemForDMa, 0);
+	}
 
 	//取消选中
 	HAL_GPIO_WritePin(LCD_NSS_GPIO_Port,LCD_NSS_Pin,GPIO_PIN_SET);
